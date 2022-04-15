@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+body {
+    margin: 0%;
+}
+
+#header {
+    background: linear-gradient(navy, blue);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+
+#logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#business {
+    font-size: 21px;
+}
+
+#name {
+    /* font-family: teko, sans-serif; */
+    font-size: 40px;
+    border: solid;
+    border-width: 5px;
+    border-color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#nav-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-items {
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-right: thin solid;
+}
+
+#phone {
+    padding-left: 10px;
+    padding-right: 10px
+}
