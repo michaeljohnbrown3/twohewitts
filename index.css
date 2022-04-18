@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,600;1,500&display=swap');
 body {
     margin: 0%;
 }
@@ -11,6 +11,8 @@ body {
     padding-top: 5px;
     padding-left: 5px;
     padding-bottom: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: sticky;
 }
 
 #logo {
@@ -20,15 +22,21 @@ body {
 }
 
 #business {
-    font-size: 21px;
+    font-size: 20px;
+    font-family: 'Josefin Sans', san-serif;
+    font-style: italic;
+    font-weight: 500;
+    padding-top: 5px;
 }
 
 #name {
-    /* font-family: teko, sans-serif; */
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 40px;
     border: solid;
     border-width: 5px;
     border-color: white;
+    padding-top: 10px;
+    padding-bottom: 2px;
     padding-left: 5px;
     padding-right: 5px;
 }
@@ -48,5 +56,36 @@ body {
 
 #phone {
     padding-left: 10px;
-    padding-right: 10px
+    padding-right: 10px;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+#pics-and-quote-container {
+    padding: 1em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#landing-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 20px;
+}
+
+.landing-gallery {
+    width: 250px;
+    height: 250px;
+}
+
+#request-quote {
+    border: solid;
+    border-color: tan;
+    background-color: tan;
+    text-align: center;
+    width: 400px;
 }
