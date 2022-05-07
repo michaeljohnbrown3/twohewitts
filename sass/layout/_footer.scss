@@ -1,0 +1,21 @@
+.footer {
+  padding: 4rem 0;
+  color: $color-light-grey;
+  background-color: $color-dark-grey;
+
+  &__site-map {
+    font-size: 1.6rem;
+  }
+
+  &__certifications {
+    font-size: 1.6rem;
+  }
+
+  &__social-media {
+
+    &--insta {
+      height: 4rem;
+      width: auto;
+    }
+  }
+}
