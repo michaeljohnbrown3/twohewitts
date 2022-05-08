@@ -1,15 +1,16 @@
 .collage {
-  background-color: $color-light-grey;
+  background-image: linear-gradient(rgba($color-white, 0.8), rgba($color-light-grey, 0.8)), url("../assets/images/IMG_0006.jpg");
   padding: 5rem 0;
+  text-align: center;
   
   &__photo {
     height: auto;
-    width: 100%;
+    width: 30%;
     border-radius: 5px;
     transition: all .5s;
 
     &:hover {
-      transform: scale(1.1, 1.1);
+      transform: scale(1.5, 1.5);
       box-shadow: 0rem 0rem 2rem $color-black;
     }
   }

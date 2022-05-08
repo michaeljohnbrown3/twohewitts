@@ -1,7 +1,8 @@
 .footer {
   padding: 4rem 0;
+  font-size: 4rem;
   color: $color-light-grey;
-  background-color: $color-dark-grey;
+  background-color: $color-dark-grey; 
 
   &__site-map {
     font-size: 1.6rem;
@@ -17,5 +18,16 @@
       height: 4rem;
       width: auto;
     }
+  }
+}
+
+.fa {
+  letter-spacing: 1rem;
+  color: $color-light-grey;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-white;
+    transform: scale(1.1, 1.1);
   }
 }
