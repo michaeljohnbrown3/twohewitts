@@ -12,6 +12,40 @@
 </head>
 
 <body>
+
+    <div class="formbtn">
+        <input type="checkbox" class="formbtn__checkbox" id="quote-toggle">
+
+        <label for="quote-toggle" class="formbtn__button">
+            <span class="formbtn__icon">Click to request a quote</span>
+        </label>
+
+        <div class="formbtn__background">&nbsp;</div>
+
+        <form class="quote__content">
+            <a href="#" class="quote__logo">
+                <div class="quote__logo--name">TWO HEWITTS INC</div>
+                <div class="quote__logo--description">LAWN MAINENANCE & LANDSCAPING</div>
+            </a>
+            <div class="quote__heading heading-secondary">REQUEST A QUOTE</div>
+            <div class="quote__group">
+                <input type="text" class="quote__input" placeholder="Name" id="name" required>
+                <label for="name" class="quote__label">Name</label>
+            </div>
+            <div class="quote__group">
+                <input type="email" class="quote__input" placeholder="Email" id="email" required>
+                <label for="email" class="quote__label">Email</label>
+            </div>
+            <div class="quote__group">
+                <input type="text" class="quote__input" placeholder="Phone Number" id="phone" required>
+                <label for="phone" class="quote__label">Phone Number</label>
+            </div>
+            <div class="quote__group">
+                <button href="#" class="quote__btn">Submit</button>
+            </div>
+        </form>
+
+    </div>
     <header class="header">
             <nav class="header__navigation">
                 <a href="#" class="header__navigation-items header__navigation-about">About Us</a>
@@ -24,6 +58,7 @@
             </a>
             <a href="#" type="phone" class="header__phone">561-888-8888</a>
     </header>
+
     <main>
         <section class="collage">
             <div class="row u-center-text u-padding-top-huge u-margin-bottom-medium">
@@ -49,27 +84,8 @@
                 </div>
             </div>
         </section>
-
-
-
-
-        <!-- <div id="main">
-            <div id="pics-and-quote-container">
-            <div id="landing-gallery">
-                <img id="landing-gallery-1" class="landing-gallery" src="/assets/images/IMG_0001.jpg">
-                <img id="landing-gallery-2" class="landing-gallery" src="/assets/images/IMG_0003.jpg">
-                <img id="landing-gallery-3" class="landing-gallery" src="/assets/images/IMG_0004.jpg">
-                <img id="landing-gallery-4" class="landing-gallery" src="/assets/images/IMG_0006.jpg">
-            </div>
-            <div id="request-quote">
-                <h2>Call now to request a quote!</h2>
-                <h1>561-888-8888</h1>
-                <h2>or enter your email address</h2>
-                <input type="text">
-                <button type="submit">Submit</button>
-            </div>
-        </div> -->
     </main>
+
     <footer class="footer">
         <div class="row u-center-text">
             <div class="col-1-of-3">
@@ -84,12 +100,39 @@
             </div>
             <div class="col-1-of-3">
                 <div class="footer__social-media">
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="https://www.facebook.com" class="fa fa-facebook"></a>
+                    <a href="https://www.instagram.com" class="fa fa-instagram"></a>
+                    <a href="https://www.twitter.com" class="fa fa-twitter"></a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <div class="quote" id="quote">
+        <form class="quote__content">
+            <a href="#" class="quote__logo">
+                <div class="quote__logo--name">TWO HEWITTS INC</div>
+                <div class="quote__logo--description">LAWN MAINENANCE & LANDSCAPING</div>
+            </a>
+            <div class="quote__heading heading-secondary">REQUEST A QUOTE</div>
+            <div class="quote__group">
+                <input type="text" class="quote__input" placeholder="Name" id="name" required>
+                <label for="name" class="quote__label">Name</label>
+            </div>
+            <div class="quote__group">
+                <input type="email" class="quote__input" placeholder="Email" id="email" required>
+                <label for="email" class="quote__label">Email</label>
+            </div>
+            <div class="quote__group">
+                <input type="text" class="quote__input" placeholder="Phone Number" id="phone" required>
+                <label for="phone" class="quote__label">Phone Number</label>
+            </div>
+            <div class="quote__group">
+                <button class="quote__btn">Submit</button>
+            </div>
+        </form>
+    </div>
+
     <script src="index.js"></script>
 </body>
 

@@ -1,7 +1,7 @@
 .header {
   background: linear-gradient($color-primary-dark, $color-primary-light);
   color: $color-white;
-  padding: 2.5rem 0;
+  padding: 1.5rem 0;
   position: fixed;
   width: 100%;
   height: auto;
@@ -22,7 +22,7 @@
     
     &-name {
       font-family: 'Josefin Sans', sans-serif;
-      font-size: 5rem;
+      font-size: 4.25rem;
       border: solid;
       border-width: .5rem;
       border-color: white;
@@ -30,10 +30,11 @@
       padding-bottom: .2rem;
       padding-left: .5rem;
       padding-right: .5rem;
+      padding: 1rem .5rem .2rem .5rem;
     }
 
     &-description {
-      font-size: 2.5rem;
+      font-size: 2rem;
       font-family: 'Josefin Sans', san-serif;
       font-style: italic;
       font-weight: 500;
@@ -43,8 +44,8 @@
     
     &__text {
       width: 160rem;
-    padding: 1.5rem;
-  }
+      padding: 1.5rem;
+    }
 
   &__navigation {
 
@@ -58,17 +59,14 @@
         padding: $nav-padding;
         color: $color-white;
         opacity: 0;
-        transition: all .2s;
-        &:not(:last-child) {
-          border-right: $nav-border;
-        }
+        // transition: all .2s;
       }
       
       &:hover {
         background-color: white;
         color: navy;
         box-shadow: 0 1rem 2rem rgba($color-black, .2);
-        border-radius: 1px;
+        border-radius: 5px;
       }
     }
     
@@ -87,7 +85,7 @@
     &-gallery {
       animation: moveInUp 0.5s linear;
       animation-fill-mode: forwards;
-      animation-delay: 0s;
+      // animation-delay: 0s;
     }
 
   }

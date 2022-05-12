@@ -84,8 +84,8 @@
   }
   100% {
     opacity: 1;
-    -webkit-transform: translate(0);
-            transform: translate(0);
+    -webkit-transform: translate(0px);
+            transform: translate(0px);
   }
 }
 
@@ -97,8 +97,8 @@
   }
   100% {
     opacity: 1;
-    -webkit-transform: translate(0);
-            transform: translate(0);
+    -webkit-transform: translate(0px);
+            transform: translate(0px);
   }
 }
 
@@ -213,6 +213,190 @@ body {
   padding-bottom: 16rem;
 }
 
+.formbtn__checkbox {
+  display: none;
+}
+
+.formbtn__button {
+  font-family: "Josefin sans", sans-serif;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  background-color: #fff;
+  height: auto;
+  width: 10rem;
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 2rem;
+  color: darkblue;
+  background-color: #a8a8a8;
+  border: 0.2rem solid darkblue;
+  border-radius: 10px;
+  padding: 1rem 1rem;
+  z-index: 2000;
+  -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+}
+
+.formbtn__background {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 8rem;
+  background-color: #dbdbdb;
+  z-index: 1998;
+  -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.formbtn__checkbox:checked ~ .formbtn__background {
+  -webkit-transform: scale(110);
+          transform: scale(110);
+}
+
+.quote {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 0%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.quote__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 0%;
+  height: auto;
+  padding: 4rem;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 2001;
+}
+
+.quote__logo {
+  display: inline-block;
+  position: absolute;
+  color: darkblue;
+  text-decoration: none;
+  top: 50%;
+  right: 5%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-align: center;
+}
+
+.quote__logo--name {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 3rem;
+  border: solid;
+  border-width: .3rem;
+  border-color: darkblue;
+  padding: .5rem .4rem .05rem .4rem;
+}
+
+.quote__logo--description {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 400;
+  padding-top: .5rem;
+}
+
+.quote__heading {
+  text-align: center;
+}
+
+.quote__group {
+  margin: 4rem;
+}
+
+.quote__input {
+  font-size: 1.5rem;
+  font-family: 'Josefin sans', sans-serif;
+  color: inherit;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+  border: none;
+  border-bottom: 3px solid transparent;
+  width: 50%;
+  display: block;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.quote__input:focus {
+  outline: none;
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid darkblue;
+}
+
+.quote__input:focus:invalid {
+  border-bottom: 3px solid red;
+}
+
+.quote__input::-webkit-input-placeholder {
+  color: #1a1a1a;
+}
+
+.quote__label {
+  font-family: 'Josefin sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: .7rem;
+  display: block;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.quote__input:placeholder-shown + .quote__label {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-4rem);
+          transform: translateY(-4rem);
+}
+
+.quote__btn {
+  font-family: "Josefin sans", sans-serif;
+  font-size: 4rem;
+  padding: .5rem .4rem .05rem .4rem;
+  border-radius: 5px;
+  background-color: darkblue;
+  color: #fff;
+  border-color: #fff;
+  border-width: 3px;
+}
+
+.formbtn__checkbox:checked ~ .quote {
+  width: 100%;
+}
+
+.formbtn__checkbox:checked ~ .quote__content {
+  opacity: 1;
+  visibility: visible;
+  width: 70%;
+  -webkit-animation: moveInUp .5s ease-in;
+          animation: moveInUp .5s ease-in;
+  -webkit-animation-delay: .8s;
+          animation-delay: .8s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+
 .footer {
   padding: 4rem 0;
   font-size: 4rem;
@@ -296,7 +480,7 @@ body {
   background: -webkit-gradient(linear, left top, left bottom, from(#01012c), to(#5d5dfa));
   background: linear-gradient(#01012c, #5d5dfa);
   color: #fff;
-  padding: 2.5rem 0;
+  padding: 1.5rem 0;
   position: fixed;
   width: 100%;
   height: auto;
@@ -330,7 +514,7 @@ body {
 
 .header__logo-name {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 5rem;
+  font-size: 4.25rem;
   border: solid;
   border-width: .5rem;
   border-color: white;
@@ -338,10 +522,11 @@ body {
   padding-bottom: .2rem;
   padding-left: .5rem;
   padding-right: .5rem;
+  padding: 1rem .5rem .2rem .5rem;
 }
 
 .header__logo-description {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-family: 'Josefin Sans', san-serif;
   font-style: italic;
   font-weight: 500;
@@ -359,15 +544,9 @@ body {
 
 .header__navigation-items, .header__navigation-items:link, .header__navigation-items:visited {
   text-decoration: none;
-  padding: 0 1rem;
+  padding: 0 2rem;
   color: #fff;
   opacity: 0;
-  -webkit-transition: all .2s;
-  transition: all .2s;
-}
-
-.header__navigation-items:not(:last-child), .header__navigation-items:link:not(:last-child), .header__navigation-items:visited:not(:last-child) {
-  border-right: thin solid;
 }
 
 .header__navigation-items:hover {
@@ -375,7 +554,7 @@ body {
   color: navy;
   -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-  border-radius: 1px;
+  border-radius: 5px;
 }
 
 .header__navigation-about {
@@ -401,8 +580,6 @@ body {
           animation: moveInUp 0.5s linear;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
 }
 
 .header__phone {

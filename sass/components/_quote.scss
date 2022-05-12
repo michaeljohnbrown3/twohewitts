@@ -1,0 +1,166 @@
+.formbtn {
+    &__checkbox {
+        display: none;
+    }
+
+    &__button {
+        font-family: $default-font;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        background-color: $color-white;
+        height: auto;
+        width: 10rem;
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 2rem;
+        color: $color-primary;
+        background-color: $color-light-grey;
+        border: .2rem solid $color-primary;
+        border-radius: 10px;
+        padding: 1rem 1rem;
+        z-index: 2000;
+        box-shadow: 0 1rem 3rem rgba($color-black, .1);
+        text-align: center;
+        cursor: pointer;
+    }
+
+    &__background {
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 8rem;
+        background-color: lighten($color-light-grey, 20);
+        z-index: 1998;
+        transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+
+    &__checkbox:checked ~ &__background {
+        transform: scale(110);
+    }
+}
+
+.quote {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 0%;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    &__content {
+        @include absCenter;
+        width: 0%;
+        height: auto;
+        padding: 4rem;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 2001;
+    }
+
+    &__logo {
+        display: inline-block;
+        position: absolute;
+        color: $color-primary;
+        text-decoration: none;
+        top: 50%;
+        right: 5%;
+        transform: translateY(-50%);
+        text-align: center;
+
+        &--name {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 3rem;
+            border: solid;
+            border-width: .3rem;
+            border-color: $color-primary;
+            padding: .5rem .4rem .05rem .4rem;
+        }
+
+        &--description {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 1.5rem;
+            font-style: italic;
+            font-weight: 400;
+            padding-top: .5rem;
+        }
+    }
+
+    &__heading {
+        text-align: center;   
+    }
+
+    &__group {
+        margin: 4rem;
+    }
+
+    &__input {
+        font-size: 1.5rem;
+        font-family: 'Josefin sans', sans-serif;
+        color: inherit;
+        padding: 1rem 2rem;
+        border-radius: 2px;
+        border: none;
+        border-bottom: 3px solid transparent;
+        width: 50%;
+        display: block;
+        transition: all .3s;
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($color-black, .1);
+            border-bottom: 3px solid $color-primary;
+        }
+
+        &:focus:invalid {
+            border-bottom: 3px solid red;
+        }
+
+        &::-webkit-input-placeholder {
+            color: $color-dark-grey;
+        }
+    }
+
+    &__label {
+        font-family: 'Josefin sans', sans-serif;
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-left: 2rem;
+        margin-top: .7rem;
+        display: block;
+        transition: all .3s;
+    }
+
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+
+    &__btn {
+        font-family: $default-font;
+        font-size: 4rem;
+        padding: .5rem .4rem .05rem .4rem;
+        border-radius: 5px;
+        background-color: $color-primary;
+        color: $color-white;
+        border-color: $color-white;
+        border-width: 3px;
+    }
+}
+
+.formbtn__checkbox:checked ~ .quote {
+    width: 100%;
+}
+
+.formbtn__checkbox:checked ~ .quote__content {
+    opacity: 1;
+    visibility: visible;
+    width: 70%;
+    animation: moveInUp .5s ease-in;
+    animation-delay: .8s;
+    animation-fill-mode: backwards;
+}
