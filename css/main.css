@@ -587,7 +587,7 @@ body {
   font-style: italic;
   font-weight: bold;
   opacity: 0;
-  padding: 0 7rem;
+  padding: 0 10rem;
   text-decoration: none;
   color: #fff;
   -webkit-animation: moveInUp 0.5s linear;
