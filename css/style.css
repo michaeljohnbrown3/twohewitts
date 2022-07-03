@@ -113,128 +113,137 @@ body {
 .u-padding-bottom-huge {
   padding-bottom: 16rem; }
 
-.formbtn__checkbox {
-  display: none; }
+.formbtn {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 1;
+  z-index: 1990; }
+  .formbtn__checkbox {
+    display: none; }
+  .formbtn__button {
+    font-family: "Josefin sans", sans-serif;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    background-color: whitesmoke;
+    height: auto;
+    width: 10rem;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2rem;
+    color: darkblue;
+    border: 0.2rem solid darkblue;
+    border-radius: 10px;
+    padding: 1rem 1rem;
+    z-index: 2000;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer; }
+  .formbtn__background {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 8rem;
+    background-color: #dbdbdb;
+    z-index: 1998;
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
+  .formbtn__checkbox:checked ~ .formbtn__background {
+    transform: scale(150);
+    opacity: 1; }
 
-.formbtn__button {
-  font-family: "Josefin sans", sans-serif;
-  font-size: 1.6rem;
-  text-transform: uppercase;
-  background-color: whitesmoke;
-  height: auto;
-  width: 10rem;
+.quote__content {
   position: fixed;
   top: 50%;
+  left: 30%;
   transform: translateY(-50%);
-  right: 2rem;
-  color: darkblue;
-  border: 0.2rem solid darkblue;
-  border-radius: 10px;
-  padding: 1rem 1rem;
-  z-index: 2000;
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
-  text-align: center;
-  cursor: pointer; }
-
-.formbtn__background {
-  height: 2rem;
-  width: 2rem;
-  border-radius: 50%;
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 8rem;
-  background-color: #dbdbdb;
-  z-index: 1998;
-  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
-
-.formbtn__checkbox:checked ~ .formbtn__background {
-  transform: scale(110); }
-
-.quote {
-  position: fixed;
-  top: 0;
-  left: 0;
   height: 100vh;
   width: 0%;
-  background-color: rgba(0, 0, 0, 0.8); }
-  .quote__content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 0%;
-    height: auto;
-    padding: 4rem;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 2001; }
-  .quote__logo {
-    display: inline-block;
-    position: absolute;
-    color: darkblue;
-    text-decoration: none;
-    top: 50%;
-    right: 5%;
-    transform: translateY(-50%);
-    text-align: center; }
-    .quote__logo--name {
-      font-family: 'Josefin Sans', sans-serif;
-      font-size: 3rem;
-      border: solid;
-      border-width: .3rem;
-      border-color: darkblue;
-      padding: .5rem .4rem .05rem .4rem; }
-    .quote__logo--description {
-      font-family: 'Josefin Sans', sans-serif;
-      font-size: 1.5rem;
-      font-style: italic;
-      font-weight: 400;
-      padding-top: .5rem; }
-  .quote__heading {
-    text-align: center; }
-  .quote__group {
-    margin: 4rem; }
-  .quote__input {
+  width: 0%;
+  height: auto;
+  padding: 4rem;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 2001; }
+
+.quote__logo {
+  display: inline-block;
+  position: absolute;
+  color: darkblue;
+  text-decoration: none;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  text-align: center; }
+  .quote__logo--name {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3rem;
+    border: solid;
+    border-width: .3rem;
+    border-color: darkblue;
+    padding: .5rem .4rem .05rem .4rem; }
+  .quote__logo--description {
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 1.5rem;
-    font-family: 'Josefin sans', sans-serif;
-    color: inherit;
-    padding: 1rem 2rem;
-    border-radius: 2px;
-    border: none;
-    border-bottom: 3px solid transparent;
-    width: 50%;
-    display: block;
-    transition: all .3s; }
-    .quote__input:focus {
-      outline: none;
-      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
-      border-bottom: 3px solid darkblue; }
-    .quote__input:focus:invalid {
-      border-bottom: 3px solid red; }
-    .quote__input::-webkit-input-placeholder {
-      color: #1a1a1a; }
-  .quote__label {
-    font-family: 'Josefin sans', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-left: 2rem;
-    margin-top: .7rem;
-    display: block;
-    transition: all .3s; }
-  .quote__input:placeholder-shown + .quote__label {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-4rem); }
-  .quote__btn {
-    font-family: "Josefin sans", sans-serif;
-    font-size: 4rem;
-    padding: .5rem .4rem .05rem .4rem;
-    border-radius: 5px;
-    background-color: darkblue;
-    color: #fff;
-    border-color: #fff;
-    border-width: 3px; }
+    font-style: italic;
+    font-weight: 400;
+    padding-top: .5rem; }
+
+.quote__heading {
+  text-align: center; }
+
+.quote__group {
+  margin: 4rem; }
+
+.quote__input {
+  font-size: 1.5rem;
+  font-family: 'Josefin sans', sans-serif;
+  color: inherit;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+  border: none;
+  border-bottom: 3px solid transparent;
+  width: 50%;
+  display: block;
+  transition: all .3s; }
+  .quote__input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid darkblue; }
+  .quote__input:focus:invalid {
+    border-bottom: 3px solid red; }
+  .quote__input::-webkit-input-placeholder {
+    color: #1a1a1a; }
+
+.quote__label {
+  font-family: 'Josefin sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: .7rem;
+  display: block;
+  transition: all .3s; }
+
+.quote__input:placeholder-shown + .quote__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem); }
+
+.quote__btn {
+  font-family: "Josefin sans", sans-serif;
+  font-size: 4rem;
+  padding: .5rem .4rem .05rem .4rem;
+  border-radius: 5px;
+  background-color: darkblue;
+  color: #fff;
+  border-color: #fff;
+  border-width: 3px; }
 
 .formbtn__checkbox:checked ~ .quote {
   width: 100%; }
@@ -242,10 +251,9 @@ body {
 .formbtn__checkbox:checked ~ .quote__content {
   opacity: 1;
   visibility: visible;
-  width: 70%;
-  animation: moveInUp .5s ease-in;
-  animation-delay: .8s;
-  animation-fill-mode: backwards; }
+  width: 60%;
+  transition: opacity .5s ease-in;
+  transition-delay: .7s; }
 
 .footer {
   padding: 4rem 0;
