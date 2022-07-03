@@ -113,60 +113,52 @@ body {
 .u-padding-bottom-huge {
   padding-bottom: 16rem; }
 
-.formbtn {
+.formbtn__checkbox {
+  display: none; }
+
+.formbtn__button {
+  font-family: "Josefin sans", sans-serif;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  background-color: whitesmoke;
+  height: auto;
+  width: 10rem;
   position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2rem;
+  color: darkblue;
+  border: 0.2rem solid darkblue;
+  border-radius: 10px;
+  padding: 1rem 1rem;
+  z-index: 2000;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer; }
+
+.formbtn__background {
   height: 100vh;
   width: 100%;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 1998; }
+
+.formbtn__checkbox:checked ~ .formbtn__background {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  background-color: rgba(0, 0, 0, 0.3);
-  opacity: 1;
-  z-index: 1990; }
-  .formbtn__checkbox {
-    display: none; }
-  .formbtn__button {
-    font-family: "Josefin sans", sans-serif;
-    font-size: 1.6rem;
-    text-transform: uppercase;
-    background-color: whitesmoke;
-    height: auto;
-    width: 10rem;
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 2rem;
-    color: darkblue;
-    border: 0.2rem solid darkblue;
-    border-radius: 10px;
-    padding: 1rem 1rem;
-    z-index: 2000;
-    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
-    text-align: center;
-    cursor: pointer; }
-  .formbtn__background {
-    height: 2rem;
-    width: 2rem;
-    border-radius: 50%;
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 8rem;
-    background-color: #dbdbdb;
-    z-index: 1998;
-    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
-  .formbtn__checkbox:checked ~ .formbtn__background {
-    transform: scale(150);
-    opacity: 1; }
+  background-color: rgba(0, 0, 0, 0.3); }
 
 .quote__content {
   position: fixed;
+  height: 0%;
+  width: 0%;
+  right: 0;
   top: 50%;
-  left: 30%;
   transform: translateY(-50%);
-  height: 100vh;
-  width: 0%;
-  width: 0%;
-  height: auto;
+  background-color: #dbdbdb;
   padding: 4rem;
   opacity: 0;
   visibility: hidden;
@@ -249,11 +241,14 @@ body {
   width: 100%; }
 
 .formbtn__checkbox:checked ~ .quote__content {
-  opacity: 1;
-  visibility: visible;
+  height: auto;
   width: 60%;
-  transition: opacity .5s ease-in;
-  transition-delay: .7s; }
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  visibility: visible;
+  opacity: 1;
+  transition: all .2s ease-in; }
 
 .footer {
   padding: 4rem 0;

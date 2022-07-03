@@ -1,13 +1,4 @@
 .formbtn {
-    position: fixed;
-    height: 100vh;
-    width: 100%;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    background-color: rgba($color-black, .3);
-    opacity: 1;
-    z-index: 1990;
-
     &__checkbox {
         display: none;
     }
@@ -34,36 +25,32 @@
     }
 
     &__background {
-        height: 2rem;
-        width: 2rem;
-        border-radius: 50%;
+        height: 100vh;
+        width: 100%;
         position: fixed;
         top: 50%;
         transform: translateY(-50%);
-        right: 8rem;
-        background-color: lighten($color-light-grey, 20);
+        right: 0;
+        background-color: rgba(0, 0, 0, 0);
         z-index: 1998;
-        transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
     }
-
+    
     &__checkbox:checked ~ &__background {
-        transform: scale(150);
-        opacity: 1;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: rgba(0, 0, 0, 0.3);
     }
 }
 
 .quote {
     &__content {
         position: fixed;
+        height: 0%;
+        width: 0%;
+        right: 0;
         top: 50%;
-        left: 30%;
         transform: translateY(-50%);
-        height: 100vh;
-        width: 0%;
-        // background-color: rgba(0, 0, 0, 0.8);
-        // @include absCenter;
-        width: 0%;
-        height: auto;
+        background-color: lighten($color-light-grey, 20);
         padding: 4rem;
         opacity: 0;
         visibility: hidden;
@@ -166,9 +153,12 @@
 }
 
 .formbtn__checkbox:checked ~ .quote__content {
-    opacity: 1;
-    visibility: visible;
+    height: auto;
     width: 60%;
-    transition: opacity .5s ease-in;
-    transition-delay: .7s;
+    right: 50%;
+    top: 50%;
+    transform: translate(50%, -50%);
+    visibility: visible;
+    opacity: 1;
+    transition: all .2s ease-in;
 }
