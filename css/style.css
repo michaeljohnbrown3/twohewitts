@@ -42,7 +42,13 @@ html {
   font-size: 62.5%; }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  background-color: #4d4d4d; }
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  box-shadow: 0px 0px 6px 6px #000; }
 
 body {
   font-family: Arial, Helvetica, sans-serif; }
@@ -301,19 +307,19 @@ body {
     width: calc(3 * ((100% - 3 * 6rem) / 4) + (2 * 6rem)); }
 
 .header {
-  background: linear-gradient(#01012c, #5d5dfa);
+  background: linear-gradient(darkblue, #5d5dfa);
   color: #fff;
   padding: 1.5rem 0;
   position: fixed;
-  width: 100%;
-  height: 14rem;
+  height: 10rem;
+  width: 120rem;
+  margin: 0 auto;
   text-align: center;
-  box-shadow: 0px .5rem .5rem black;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  z-index: 3; }
+  z-index: 300; }
   .header__logo {
     display: inline-block;
     position: relative;
@@ -322,21 +328,17 @@ body {
     animation: fadeIn 1.1s ease-out; }
     .header__logo-name {
       font-family: 'Josefin Sans', sans-serif;
-      font-size: 4.25rem;
+      font-size: 3rem;
       border: solid;
       border-width: .5rem;
-      border-color: white;
-      padding-top: 1rem;
-      padding-bottom: .2rem;
-      padding-left: .5rem;
-      padding-right: .5rem;
+      border-color: #fff;
       padding: 1rem .5rem .2rem .5rem; }
     .header__logo-description {
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-family: 'Josefin Sans', san-serif;
       font-style: italic;
       font-weight: 500;
-      padding-top: 1.5rem; }
+      padding-top: .6rem; }
   .header__text {
     width: 160rem;
     padding: 1.5rem; }
@@ -364,11 +366,10 @@ body {
       animation: moveInUp 0.5s linear;
       animation-fill-mode: forwards; }
   .header__phone {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-style: italic;
     font-weight: bold;
     opacity: 0;
-    padding: 0 10rem;
     text-decoration: none;
     color: #fff;
     animation: moveInUp 0.5s linear;
@@ -377,7 +378,7 @@ body {
 
 .picture-border {
   display: flex;
-  padding-top: 14rem; }
+  padding-top: 10rem; }
   .picture-border__photo {
     width: 100%;
     display: block;
@@ -386,12 +387,10 @@ body {
   .picture-border__tag-line {
     font-family: 'Josefin Sans', sans-serif;
     font-style: italic;
-    font-size: 6rem;
+    font-size: 2rem;
     text-transform: uppercase;
     color: #fff;
-    background-color: #5d5dfa;
     text-align: left;
-    padding-left: 5%;
     height: 9rem;
     width: auto;
     display: flex;
@@ -409,3 +408,50 @@ body {
     .collage__photo:hover {
       transform: scale(1.5, 1.5);
       box-shadow: 0rem 0rem 2rem #000; }
+
+.content {
+  display: flex; }
+
+.sidebar {
+  width: 28%;
+  margin: 10rem 0 0 0;
+  background-color: #1a1a1a; }
+
+.side-nav {
+  font-size: 2rem;
+  list-style: none;
+  margin-top: 3.5rem; }
+  .side-nav__item {
+    position: relative; }
+    .side-nav__item:not(:last-child) {
+      margin-bottom: .5rem; }
+  .side-nav__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: #5d5dfa;
+    transform: scaleY(0);
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s; }
+  .side-nav__item:hover::before, .side-nav__item--active::before {
+    transform: scaleY(1);
+    width: 100%; }
+  .side-nav__item:active::before {
+    background-color: #5d5dfa; }
+  .side-nav__link:link, .side-nav__link:visited {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    padding: 1.5rem 3rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 10; }
+  .side-nav__icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-right: 2rem;
+    fill: currentColor; }
