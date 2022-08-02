@@ -1,0 +1,53 @@
+.section {
+  &__aboutus {
+    min-height: 100vh;
+    padding: 0 5%;
+    border: 1px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__services {
+  }
+}
+
+.aboutus-container {
+  min-height: 70vh;
+  width: 100%;
+  background-color: $color-white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  box-shadow: 0 0 10px 0 px $color-dark-grey;
+
+  &__photo {
+    height: auto;
+    width: 50%;
+
+    &--file {
+      position: relative;
+      height: auto;
+      width: 70%;
+      overflow: hidden;
+      border-radius: 50%;
+    }
+  }
+
+  &__text {
+    width: 50%;
+    &--title {
+      font-family: $default-font;
+      text-transform: uppercase;
+      font-size: 4rem;
+      margin-bottom: 4rem;
+    }
+
+    &--paragraph {
+      font-family: $cursive-font;
+      font-size: 2.2rem;
+      font-style: italic;
+      text-align: justify;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+.tagline-container {
+  //   background-color: $color-white;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-lightest-grey, 0.7),
+      rgba($color-lightest-grey, 0.7)
+    ),
+    url(../assets/images/house-STOCK.jpg);
+  min-height: 60vh;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 24rem;
+
+  &__text {
+    min-width: 50%;
+    font-family: $cursive-font;
+    font-style: italic;
+    font-size: 2.7rem;
+    text-align: center;
+    color: $color-primary;
+    text-shadow: 0 0 10px $color-dark-grey;
+    // text-transform: uppercase;
+    // position: relative;
+  }
+  &__collage {
+    display: flex;
+    justify-content: center;
+    max-width: 40%;
+    &--photo {
+      width: 20%;
+      box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+      border-radius: 2px;
+      position: relative;
+      transition: all 0.2s;
+
+      &:hover {
+        transform: scale(1.4) translateY(-0.5rem);
+        box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+        z-index: 20;
+      }
+    }
+
+    &--photo-1 {
+      //   right: 24rem;
+      //   top: 1rem;
+    }
+
+    &--photo-2 {
+      //   left: -1rem;
+      //   top: 2rem;
+    }
+
+    &--photo-3 {
+      //   left: 0rem;
+      //   top: -1rem;
+    }
+
+    &:hover &__photo:not(:hover) {
+      transform: scale(0.6);
+    }
+  }
+}
+
+.picture-border {
+  display: flex;
+  margin-left: 24rem;
+
+  &__photo {
+    width: 100%;
+    display: block;
+    max-height: 25rem;
+    justify-content: center;
+  }
+}

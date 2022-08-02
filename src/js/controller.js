@@ -1,8 +1,26 @@
 import '../sass/main.scss';
+import * as model from './model';
 
-const tagline = document.querySelector('.tagline-container__text');
-const replaceTagline = function (text) {
-  tagline.textContent = `${text}`;
+import { navTitle } from './views/navView';
+import { pictureBorder, pictureBorderHeight } from './views/View';
+
+// clicking a nav button
+const scrollTo = function () {};
+
+const displaceHidden = function (entries) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) navTitle.classList.remove('hidden');
+  else navTitle.classList.add('hidden');
 };
 
-replaceTagline('HOWDY!');
+export const headerObserver = new IntersectionObserver(displaceHidden, {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${pictureBorderHeight}px`,
+});
+
+const init = function () {
+  headerObserver.observe(pictureBorder);
+};
+init();

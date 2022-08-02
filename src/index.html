@@ -14,7 +14,7 @@
           <ul class="side-nav">
             <li class="side-nav__logo-container">
               <a href="#" class="side-nav__logo">
-                <h3 class="side-nav__logo-name">TWO HEWITTS INC</h3>
+                <h3 class="side-nav__logo--name hidden">TWO HEWITTS INC</h3>
               </a>
             </li>
             <li class="side-nav__item">
@@ -50,7 +50,12 @@
             </div>
           </a>
           <!-- <div class="picture-border__tag-line">Making your property your paradise</div> -->
-          <a href="#" type="phone" class="header__phone">561-888-8888</a>
+          <div class="header__phone">
+            <svg class="header__icon">
+              <use xlink:href="./assets/sprite.svg#icon-phone"></use>
+            </svg>
+            <a href="#" type="phone" class="header__phone">561-888-8888</a>
+          </div>
         </header>
         <main>
           <div class="picture-border">
@@ -84,35 +89,66 @@
             </figure>
           </div>
           <!--LANDING PAGE-->
+          <!--TAGLINE CONTAINER-->
+          <div class="tagline-container">
+            <div class="tagline-container__text">
+              Making YOUR property YOUR paradise
+            </div>
+            <!-- <div class="tagline-container__collage">
+              <img
+                src="./assets/images/IMG_0002-1.jpg"
+                alt="Photo 1"
+                class="tagline-container__collage--photo tagline-container__collage--photo-1"
+              />
+              <img
+                src="./assets/images/IMG_0002-2.jpg"
+                alt="Photo 2"
+                class="tagline-container__collage--photo tagline-container__collage--photo-2"
+              />
+              <img
+                src="./assets/images/IMG_0002-3.jpg"
+                alt="Photo 3"
+                class="tagline-container__collage--photo tagline-container__collage--photo-3"
+              />
+            </div> -->
+          </div>
+          <!--ABOUT US-->
           <div class="landing-page">
-            <!--TAGLINE CONTAINER-->
-            <div class="tagline-container">
-              <div class="tagline-container__text">
-                making your property your paradise
-              </div>
-              <div class="tagline-container__collage">
-                <img
-                  src="./assets/images/IMG_0002-1.jpg"
-                  alt="Photo 1"
-                  class="tagline-container__collage--photo tagline-container__collage--photo-1"
-                />
-                <img
-                  src="./assets/images/IMG_0002-2.jpg"
-                  alt="Photo 2"
-                  class="tagline-container__collage--photo tagline-container__collage--photo-2"
-                />
-                <img
-                  src="./assets/images/IMG_0002-3.jpg"
-                  alt="Photo 3"
-                  class="tagline-container__collage--photo tagline-container__collage--photo-3"
-                />
+            <div class="section__aboutus">
+              <div class="aboutus-container">
+                <div class="aboutus-container__photo">
+                  <img
+                    src="./assets/images/lawnmower-STOCK.jpg"
+                    alt="Photo 1"
+                    class="aboutus-container__photo--file"
+                  />
+                </div>
+                <div class="aboutus-container__text">
+                  <h3 class="aboutus-container__text--title">About us</h3>
+                  <p class="aboutus-container__text--paragraph">
+                    T.W.O. Hewitt’s, Inc. is a family owned company with more
+                    than 20 years experience in lawn maintenance and
+                    landscaping. We are licensed and fully insured.
+                  </p>
+                </div>
               </div>
             </div>
-            <!--ABOUT US-->
-            <div class="about-us"></div>
             <!--SERVICES-->
-            <div class="services">
-              <div
+            <div class="section__services">
+              <div class="services">
+                <div class="services__title">Services</div>
+                <div class="services__lawn">
+                  <h2 class="heading-secondary">Premium lawn services</h2>
+                </div>
+                <div class="services__landscape">
+                  <h2 class="heading-secondary">Innovative landscaping</h2>
+                </div>
+                <div class="services__other"></div>
+              </div>
+            </div>
+              
+              
+              <!-- <div
                 class="row u-center-text u-padding-top-large u-margin-bottom-medium"
               >
                 <div class="col-1-of-2">
@@ -131,9 +167,8 @@
                     src="./assets/images/IMG_0003.jpg"
                     alt="Lawn Picture #2"
                   />
-                </div>
-              </div>
-              <div
+                </div> -->
+              <!-- <div
                 class="row u-center-text u-padding-top-small u-padding-bottom-large"
               >
                 <div class="col-1-of-2">
@@ -152,7 +187,7 @@
                     src="./assets/images/IMG_0003.jpg"
                     alt="Lawn Picture #2"
                   />
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
