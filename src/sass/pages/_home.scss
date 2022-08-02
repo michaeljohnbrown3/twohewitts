@@ -1,7 +1,8 @@
 .landing-page {
   background-image: linear-gradient(
-      rgba($color-white, 0.8),
-      rgba($color-light-grey, 0.8)
+      to right,
+      rgba($color-primary-light, 0.95),
+      rgba($color-primary, 0.95)
     ),
     url('../assets/images/IMG_0006.jpg');
   text-align: center;

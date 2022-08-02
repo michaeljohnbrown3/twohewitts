@@ -15,6 +15,7 @@
   justify-content: space-around;
   align-items: center;
   z-index: 300;
+  text-shadow: 0 1px 7px $color-black;
 
   &__logo {
     display: inline-block;
@@ -23,7 +24,6 @@
     color: $color-white;
     text-decoration: none;
     animation: $header-animation;
-    text-shadow: 0 1px 7px $color-black;
 
     &-name {
       font-family: 'Josefin Sans', sans-serif;

@@ -2,7 +2,7 @@ import '../sass/main.scss';
 import * as model from './model';
 
 import { navTitle } from './views/navView';
-import { pictureBorder, pictureBorderHeight } from './views/View';
+import { header, headerHeight } from './views/View';
 
 // clicking a nav button
 const scrollTo = function () {};
@@ -17,10 +17,9 @@ const displaceHidden = function (entries) {
 export const headerObserver = new IntersectionObserver(displaceHidden, {
   root: null,
   threshold: 0,
-  rootMargin: `-${pictureBorderHeight}px`,
 });
 
 const init = function () {
-  headerObserver.observe(pictureBorder);
+  headerObserver.observe(header);
 };
 init();
