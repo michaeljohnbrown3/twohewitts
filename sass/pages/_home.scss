@@ -1,5 +1,9 @@
 .landing-page {
-  background-image: linear-gradient(rgba($color-white, 0.8), rgba($color-light-grey, 0.8)), url("../assets/images/IMG_0006.jpg");
+  background-image: linear-gradient(
+      rgba($color-white, 0.8),
+      rgba($color-light-grey, 0.8)
+    ),
+    url('../assets/images/IMG_0006.jpg');
   text-align: center;
   margin-left: 24rem;
 }
@@ -57,7 +61,7 @@
 
   &__logo-name {
     // display: none;
-    font-family: "Josefin Sans", sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 2.2rem;
     border: solid;
     border-width: 0.3rem;
@@ -83,7 +87,7 @@
   }
 
   &__item::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -91,7 +95,8 @@
     width: 3px;
     background-color: $color-primary-light;
     transform: scaleY(0);
-    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s;
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
+      background-color 0.1s;
   }
 
   &__item:hover::before,
