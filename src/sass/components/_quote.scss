@@ -1,164 +1,142 @@
 .formbtn {
-    &__checkbox {
-        display: none;
-    }
+  &__checkbox {
+    display: none;
+  }
 
-    &__button {
-        font-family: $default-font;
-        font-size: 1.6rem;
-        text-transform: uppercase;
-        background-color: lighten($color-light-grey, 30);
-        height: auto;
-        width: 12rem;
-        position: fixed;
-        top: 44%;
-        transform: translateY(-50%);
-        right: 4rem;
-        color: $color-primary;
-        border: .2rem solid $color-primary;
-        border-radius: 10px;
-        padding: 1rem 1rem;
-        z-index: 2000;
-        box-shadow: 0 1rem 3rem rgba($color-black, .1);
-        text-align: center;
-        cursor: pointer;
-    }
+  &__button {
+    font-family: $default-font;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    background-color: lighten($color-light-grey, 30);
+    height: auto;
+    width: 12rem;
+    position: fixed;
+    top: 44%;
+    transform: translateY(-50%);
+    right: 4rem;
+    color: $color-primary;
+    border: 0.2rem solid $color-primary;
+    border-radius: 10px;
+    padding: 1rem 1rem;
+    z-index: 2000;
+    box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
+    text-align: center;
+    cursor: pointer;
+  }
 
-    &__background {
-        height: 100vh;
-        width: 100%;
-        position: fixed;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 0;
-        background-color: rgba(0, 0, 0, 0);
-        z-index: 1998;
-    }
-    
-    &__checkbox:checked ~ &__background {
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
-        background-color: rgba(0, 0, 0, 0.3);
-    }
+  &__background {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 1998;
+  }
+
+  &__checkbox:checked ~ &__background {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.3);
+  }
 }
 
 .quote {
-    &__content {
-        position: fixed;
-        height: 0%;
-        width: 0%;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: lighten($color-light-grey, 20);
-        padding: 4rem;
-        opacity: 0;
-        visibility: hidden;
-        z-index: 2001;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: $color-primary-light;
+  &__content {
+  }
+
+  &__logo {
+    &--name {
     }
 
-    &__logo {
-        display: inline-block;
-        position: absolute;
-        color: $color-primary;
-        text-decoration: none;
-        top: 50%;
-        right: 5%;
-        transform: translateY(-50%);
-        text-align: center;
+    &--description {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 1.5rem;
+      font-style: italic;
+      font-weight: 400;
+      padding-top: 0.5rem;
+    }
+  }
 
-        &--name {
-            font-family: 'Josefin Sans', sans-serif;
-            font-size: 3rem;
-            border: solid;
-            border-width: .3rem;
-            border-color: $color-primary;
-            padding: .5rem .4rem .05rem .4rem;
-        }
+  &__heading {
+    text-align: center;
+  }
 
-        &--description {
-            font-family: 'Josefin Sans', sans-serif;
-            font-size: 1.5rem;
-            font-style: italic;
-            font-weight: 400;
-            padding-top: .5rem;
-        }
+  &__group {
+    margin: 4rem;
+  }
+
+  &__input {
+    font-size: 1.5rem;
+    font-family: 'Josefin sans', sans-serif;
+    color: inherit;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+    border: none;
+    border-bottom: 3px solid transparent;
+    width: 50%;
+    display: block;
+    transition: all 0.3s;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+      border-bottom: 3px solid $color-primary;
     }
 
-    &__heading {
-        text-align: center;   
+    &:focus:invalid {
+      border-bottom: 3px solid red;
     }
 
-    &__group {
-        margin: 4rem;
+    &::-webkit-input-placeholder {
+      color: $color-dark-grey;
     }
+  }
 
-    &__input {
-        font-size: 1.5rem;
-        font-family: 'Josefin sans', sans-serif;
-        color: inherit;
-        padding: 1rem 2rem;
-        border-radius: 2px;
-        border: none;
-        border-bottom: 3px solid transparent;
-        width: 50%;
-        display: block;
-        transition: all .3s;
+  &__label {
+    font-family: 'Josefin sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: 0.7rem;
+    display: block;
+    transition: all 0.3s;
+  }
 
-        &:focus {
-            outline: none;
-            box-shadow: 0 1rem 2rem rgba($color-black, .1);
-            border-bottom: 3px solid $color-primary;
-        }
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+  }
 
-        &:focus:invalid {
-            border-bottom: 3px solid red;
-        }
-
-        &::-webkit-input-placeholder {
-            color: $color-dark-grey;
-        }
-    }
-
-    &__label {
-        font-family: 'Josefin sans', sans-serif;
-        font-size: 1.2rem;
-        font-weight: 700;
-        margin-left: 2rem;
-        margin-top: .7rem;
-        display: block;
-        transition: all .3s;
-    }
-
-    &__input:placeholder-shown + &__label {
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-4rem);
-    }
-
-    &__btn {
-        font-family: $default-font;
-        font-size: 4rem;
-        padding: .5rem .4rem .05rem .4rem;
-        border-radius: 5px;
-        background-color: $color-primary;
-        color: $color-white;
-        border-color: $color-white;
-        border-width: 3px;
-    }
+  &__btn {
+    font-family: $default-font;
+    font-size: 4rem;
+    padding: 0.5rem 0.4rem 0.05rem 0.4rem;
+    border-radius: 5px;
+    background-color: $color-primary;
+    color: $color-white;
+    border-color: $color-white;
+    border-width: 3px;
+  }
 }
 
 .formbtn__checkbox:checked ~ .quote {
-    width: 100%;
+  width: 100%;
 }
 
 .formbtn__checkbox:checked ~ .quote__content {
-    height: auto;
-    width: 60%;
-    right: 50%;
-    top: 50%;
-    transform: translate(50%, -50%);
-    visibility: visible;
-    opacity: 1;
-    transition: all .2s ease-in;
+  height: auto;
+  width: 60%;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.2s ease-in;
 }

@@ -18,7 +18,7 @@
               </a>
             </li>
             <li class="side-nav__item">
-              <a href="#" class="side-nav__link">
+              <a href="#section__aboutus" class="side-nav__link">
                 <svg class="side-nav__icon">
                   <use xlink:href="./assets/sprite.svg#icon-user"></use>
                 </svg>
@@ -26,9 +26,9 @@
               </a>
             </li>
             <li class="side-nav__item">
-              <a href="#" class="side-nav__link">
+              <a href="#section__services" class="side-nav__link">
                 <svg class="side-nav__icon">
-                  <use xlink:href="./assets/sprite.svg#icon-leaf"></use>
+                  <use xlink:href="./assets/sprite.svg#icon-tree"></use>
                 </svg>
                 <span>Services</span>
               </a>
@@ -123,7 +123,7 @@
           </div>
           <!--ABOUT US-->
           <div class="landing-page">
-            <div class="section__aboutus">
+            <div class="section__aboutus" id="section__aboutus">
               <div class="aboutus-container">
                 <div class="aboutus-container__photo">
                   <img
@@ -143,16 +143,39 @@
               </div>
             </div>
             <!--SERVICES-->
-            <div class="section__services">
+            <div class="section__services" id="section__services">
+              <div class="heading-secondary white section__services--title">Services</div>
               <div class="services">
-                <div class="services__title">Services</div>
-                <div class="services__lawn">
-                  <h2 class="heading-secondary">Premium lawn services</h2>
+                <div class="services__container services__container--left">
+                  <h2 class="services__heading">Premium lawn services</h2>
+                  <img
+                    src="./assets/images/lawnmower-half-STOCK.jpg"
+                    alt="Lawnmowing"
+                    class="services__photo"
+                  />
+                  <p class="services__text">We provide lawn maintenance services by the month or per cut. We cater to each property, as all properties have different needs. T.W.O. Hewitt’s, Inc. will always strive to meet customers needs when it comes to the frequency, individuality, and quality of the services we provide.</p>
                 </div>
-                <div class="services__landscape">
-                  <h2 class="heading-secondary">Innovative landscaping</h2>
+                <div class="services__container services__container--right">
+                  <h2 class="services__heading">Innovative landscaping</h2>
+                  <img
+                    src="./assets/images/landscape-STOCK.jpg"
+                    alt="Landscaping"
+                    class="services__photo"
+                  />
+                  <p class="services__text">T.W.O. Hewitts, Inc. offers landscape design and installation. We take the time to meet with the customer to bring their ideas to fruition. From start to finish, we make sure the job is done right!</p>
                 </div>
-                <div class="services__other"></div>
+              </div>
+              <div class="other-services">
+                <ul class="other-services__list">
+                  <li class="other-services__list--title services__heading">Other Services</li>
+                  <li class="other-services__list--item">Irrigation Connect and Maintenance</li>
+                  <li class="other-services__list--item">Landscape Lighting</li>
+                  <li class="other-services__list--item">Fence Repair and Gate Installation</li>
+                  <li class="other-services__list--item">Above Ground Fountain</li>
+                  <li class="other-services__list--item">Artificial Turf</li>
+                  <li class="other-services__list--item">Rocks and Pavers</li>
+                  <li class="other-services__list--item">Artificial Ivy Walls</li>
+                </ul>
               </div>
             </div>
               
@@ -199,9 +222,8 @@
                 </div> -->
               </div>
             </div>
-          </div>
-
-          <!--FOOTER-->
+            
+            <!--FOOTER-->
           <footer class="footer">
             <div class="row u-center-text">
               <div class="col-1-of-3">
@@ -211,21 +233,33 @@
               </div>
               <div class="col-1-of-3">
                 <div class="footer__certifications">
-                  <span>&copy; </span><span>YEAR</span> TWO Hewitts LLC
+                  <span>&copy; </span><span class="footer__certifications--copyright"></span>
                 </div>
               </div>
               <div class="col-1-of-3">
                 <div class="footer__social-media">
                   <svg viewBox="0 0 100 100" fill="rgb(168, 168, 168">
                     <use
-                      xlink:href="assets/sprite.svg#icon-instagram1"
-                      class="footer__social-media--logo"
+                    xlink:href="assets/sprite.svg#icon-instagram1"
+                    class="footer__social-media--logo"
                     ></use>
                   </svg>
                 </div>
               </div>
             </div>
           </footer>
+        </div>
+        <div class="quote">
+          <div class="quote__heading">Request a quote
+
+          </div>
+          <div class="quote__content">
+
+          </div>
+          <div class="quote__logo">
+
+          </div>
+        </div>
         </main>
       </div>
 

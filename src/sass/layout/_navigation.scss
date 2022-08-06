@@ -72,6 +72,11 @@
     width: 100%;
   }
 
+  // &__item--blue {
+  //   transform: scaleY(1);
+  //   width: 100%;
+  // }
+
   &__item:active::before {
     background-color: $color-primary-light;
   }

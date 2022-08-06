@@ -41,3 +41,13 @@
     transform: translate(0px);
   }
 }
+
+@keyframes leftCenterZoom {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+
+  100% {
+    transform: translateX(50%) scale(1.5);
+  }
+}
