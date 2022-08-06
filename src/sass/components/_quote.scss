@@ -2,31 +2,24 @@
   position: sticky;
   top: 0;
   left: 0;
-  margin-left: 24rem;
+  margin-top: calc(#{$nav-header-connect} + #{$nav-height});
   overflow: hidden;
   z-index: 2000;
-  // animation: 5s;
-
-  &__heading {
-    padding-top: 2rem;
-    text-align: center;
-    font-family: $default-font;
-    font-size: 4rem;
-    font-style: italic;
-    color: $color-white;
-    text-shadow: 0 0 10px $color-black;
-    background-color: $color-primary-light;
-  }
 }
 
 .quote {
   height: 100vh;
-  width: auto;
+  width: 100vw;
   overflow: hidden;
-  padding: 2rem 8rem;
+  padding: 5rem 8rem;
   background-color: $color-primary-light;
+  display: flex;
+  justify-content: center;
 
   &__form {
+    width: 100%;
+    max-width: 100%;
+    height: 75vh;
     background-color: green;
     background-image: url(./../assets/images/lawnmower-STOCK.jpg);
     background-size: cover;
@@ -35,7 +28,11 @@
 
 .form {
   background-color: rgba($color-white, 0.5);
-  width: 70%; ///////////////
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  max-width: 60%; ///////////////
   padding: 2rem;
 
   &__group:not(:last-child) {

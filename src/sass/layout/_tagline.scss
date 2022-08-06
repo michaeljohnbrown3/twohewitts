@@ -7,12 +7,13 @@
     ),
     url(../assets/images/house-STOCK.jpg);
   background-size: cover;
-  min-height: 80vh;
+  // margin-top: 25vh;
+  // margin-top: calc(#{$nav-header-connect} + #{$nav-height});
+  min-height: calc(100vh - #{$nav-header-connect} - #{$nav-height});
   height: auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-left: 24rem;
 
   &__text {
     min-width: 50%;
