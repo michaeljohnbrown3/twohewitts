@@ -10,6 +10,7 @@
   font-style: italic;
   list-style: none;
   z-index: 50;
+  animation: navSlide 1s ease-out;
 
   &__item {
     position: relative;
@@ -79,6 +80,18 @@
     //     width: 1.5rem;
     //     height: 1.5rem;
     // }
+  }
+
+  &__phone {
+    display: flex;
+    align-items: center;
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: bold;
+    // opacity: 0;
+    text-decoration: none;
+    // color: $color-primary;
+    color: $color-white;
   }
 }
 

@@ -77,11 +77,11 @@
     transition: 0.3s ease-in;
 
     &--left:hover {
-      transform: translateX(50%) scale(1.5);
+      transform: translateX(5%) scale(1.1);
     }
 
     &--right:hover {
-      transform: translateX(-50%) scale(1.5);
+      transform: translateX(-5%) scale(1.1);
     }
   }
 
@@ -111,7 +111,7 @@
     transition: 0.3s ease-in;
 
     &:hover {
-      transform: translateY(-20%) scale(1.5);
+      transform: translateY(-5%) scale(1.1);
     }
     &--item {
       font-family: $cursive-font;
