@@ -8,6 +8,7 @@ import {
   services,
   aboutUsHeight,
   tagline,
+  quote,
 } from './views/View';
 
 const displaceHidden = function (entries) {
@@ -73,7 +74,7 @@ const headerObserver = new IntersectionObserver(displaceHidden, {
 
 const sectionObserver = new IntersectionObserver(displaySection, {
   root: null,
-  threshold: 0,
+  threshold: 0.3,
 });
 
 // const sectionTwoObserver = new IntersectionObserver(displaySection, {
@@ -100,3 +101,14 @@ document.querySelector('.side-nav').addEventListener('click', function (e) {
 document.querySelector(
   '.footer__certifications--copyright'
 ).textContent = `${new Date().getFullYear()} T.W.O. Hewitts LLC`;
+
+document
+  .querySelector('.quote-request-btn')
+  .addEventListener('click', function (e) {
+    e.preventDefault();
+    if (quote.classList.contains('hidden-quote')) {
+      quote.classList.remove('hidden-quote');
+    } else {
+      quote.classList.add('hidden-quote');
+    }
+  });

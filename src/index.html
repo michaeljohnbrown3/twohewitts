@@ -22,7 +22,7 @@
                 <svg class="side-nav__icon">
                   <use xlink:href="./assets/sprite.svg#icon-user"></use>
                 </svg>
-                <span>About Us</span>
+                About Us
               </a>
             </li>
             <li class="side-nav__item" id="side-nav__services">
@@ -30,7 +30,7 @@
                 <svg class="side-nav__icon">
                   <use xlink:href="./assets/sprite.svg#icon-tree"></use>
                 </svg>
-                <span>Services</span>
+                Services
               </a>
             </li>
             <li class="side-nav__item">
@@ -38,15 +38,18 @@
                 <svg class="side-nav__icon">
                   <use xlink:href="./assets/sprite.svg#icon-images"></use>
                 </svg>
-                <span>Gallery</span>
+                Gallery
               </a>
             </li>
-            <li class="side-nav__item side-nav__item--active">
+          </ul>
+          <ul>
+            
+            <li class="quote-request-btn">
               <a href="#" class="side-nav__link side-nav__quote">
                 <svg class="side-nav__icon">
                   <use xlink:href="./assets/sprite.svg#icon-bubble"></use>
                 </svg>
-                <span>Request a quote</span>
+                Request a quote
               </a>
             </li>
           </ul>
@@ -67,6 +70,57 @@
           </div>
         </header>
         <main>
+          <div class="quote-container hidden-quote">
+            <h2 class="quote-container__heading">Request a quote</h2> 
+          
+          <div class="quote">
+            <div class="quote__form">
+                <form action="#" class="form">
+                
+              <div class="form__group">
+                <input type="text" class="form__input" placeholder="Full name" id="name" required>
+                <label for="name" class="form__label">Full name</label>
+              </div>
+              <div class="form__group">
+                <input type="tel" class="form__input" placeholder="Phone number" id="phone" required>
+                <label for="phone" class="form__label">Phone number</label>
+              </div>
+              <div class="form__group">
+                <input type="email" class="form__input" placeholder="Email" id="email" required>
+                <label for="email" class="form__label">Email</label>
+              </div>
+              <div class="form__checkbox-group">
+                <input type="checkbox" class="form__checkbox-input" id="small" name="size">
+                <label for="small" class="form__checkbox-label">
+                    <span class="form__checkbox-button"></span>
+                    Lawn maintenance
+                </label>
+              </div>
+              <div class="form__checkbox-group">
+                <input type="checkbox" class="form__checkbox-input" id="large" name="size">
+                <label for="large" class="form__checkbox-label">
+                    <span class="form__checkbox-button"></span>
+                    Landscaping
+                </label>
+              </div>
+              <div class="form__checkbox-group">
+                <input type="checkbox" class="form__checkbox-input" id="large" name="size">
+                <label for="large" class="form__checkbox-label">
+                  <span class="form__checkbox-button"></span>
+                  Other services (please specify in comments)
+                </label>
+              </div>
+              <div class="form__group">
+                <input type="text" class="form__input form__other" placeholder="Other comments" id="comments">
+                <label for="comments" class="form__label">Other comments</label>
+              </div>
+              <div class="form__submit-btn">
+                <button class="submit-btn">Send request!</button>
+              </div>
+            </form>
+          </div>
+          </div>
+          </div>
           <!-- <div class="picture-border">
             <figure class="picture-border__item">
               <img
@@ -80,7 +134,7 @@
                 src="assets/images/IMG_0002-4.jpg"
                 alt="left picture"
                 class="picture-border__photo"
-              />
+                />
             </figure>
             <figure class="picture-border__item">
               <img
@@ -248,17 +302,6 @@
               </div>
             </div>
           </footer>
-        </div>
-        <!-- <div class="quote">
-          <div class="quote__heading">Request a quote
-
-          </div>
-          <div class="quote__content">
-
-          </div>
-          <div class="quote__logo">
-
-          </div> -->
         </div>
         </main>
       </div>

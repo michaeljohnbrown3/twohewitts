@@ -1,107 +1,74 @@
-.formbtn {
-  &__checkbox {
-    display: none;
-  }
+.quote-container {
+  position: sticky;
+  top: 0;
+  left: 0;
+  margin-left: 24rem;
+  overflow: hidden;
+  z-index: 2000;
+  // animation: 5s;
 
-  &__button {
-    font-family: $default-font;
-    font-size: 1.6rem;
-    text-transform: uppercase;
-    background-color: lighten($color-light-grey, 30);
-    height: auto;
-    width: 12rem;
-    position: fixed;
-    top: 44%;
-    transform: translateY(-50%);
-    right: 4rem;
-    color: $color-primary;
-    border: 0.2rem solid $color-primary;
-    border-radius: 10px;
-    padding: 1rem 1rem;
-    z-index: 2000;
-    box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
+  &__heading {
+    padding-top: 2rem;
     text-align: center;
-    cursor: pointer;
-  }
-
-  &__background {
-    height: 100vh;
-    width: 100%;
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0;
-    background-color: rgba(0, 0, 0, 0);
-    z-index: 1998;
-  }
-
-  &__checkbox:checked ~ &__background {
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.3);
+    font-family: $default-font;
+    font-size: 4rem;
+    font-style: italic;
+    color: $color-white;
+    text-shadow: 0 0 10px $color-black;
+    background-color: $color-primary-light;
   }
 }
 
 .quote {
-  position: fixed;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: auto;
+  overflow: hidden;
+  padding: 2rem 8rem;
   background-color: $color-primary-light;
-  &__content {
+
+  &__form {
+    background-color: green;
+    background-image: url(./../assets/images/lawnmower-STOCK.jpg);
+    background-size: cover;
   }
+}
 
-  &__logo {
-    &--name {
-    }
+.form {
+  background-color: rgba($color-white, 0.5);
+  width: 70%; ///////////////
+  padding: 2rem;
 
-    &--description {
-      font-family: 'Josefin Sans', sans-serif;
-      font-size: 1.5rem;
-      font-style: italic;
-      font-weight: 400;
-      padding-top: 0.5rem;
-    }
-  }
-
-  &__heading {
-    text-align: center;
-  }
-
-  &__group {
-    margin: 4rem;
+  &__group:not(:last-child) {
+    margin-bottom: 0.5rem;
   }
 
   &__input {
     font-size: 1.5rem;
-    font-family: 'Josefin sans', sans-serif;
+    font-family: $default-font;
     color: inherit;
     padding: 1rem 2rem;
-    border-radius: 2px;
+    border-radius: 3rem;
+    background-color: rgba($color-white, 0.5);
     border: none;
     border-bottom: 3px solid transparent;
-    width: 50%;
+    width: 90%;
     display: block;
     transition: all 0.3s;
 
     &:focus {
       outline: none;
       box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
-      border-bottom: 3px solid $color-primary;
+      border: 3px solid $color-primary;
     }
 
     &:focus:invalid {
-      border-bottom: 3px solid red;
-    }
-
-    &::-webkit-input-placeholder {
-      color: $color-dark-grey;
+      border: 3px solid $color-invalid;
     }
   }
 
   &__label {
-    font-family: 'Josefin sans', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 700;
+    font-family: $default-font;
+    font-size: 1.4rem;
     margin-left: 2rem;
     margin-top: 0.7rem;
     display: block;
@@ -110,33 +77,95 @@
 
   &__input:placeholder-shown + &__label {
     opacity: 0;
-    visibility: hidden;
+    // visibility: hidden;
     transform: translateY(-4rem);
   }
 
-  &__btn {
+  &__checkbox-group {
+    margin-bottom: 0.8rem;
+  }
+
+  &__checkbox-input {
+  }
+
+  &__checkbox-label {
     font-family: $default-font;
-    font-size: 4rem;
-    padding: 0.5rem 0.4rem 0.05rem 0.4rem;
-    border-radius: 5px;
-    background-color: $color-primary;
-    color: $color-white;
-    border-color: $color-white;
-    border-width: 3px;
+    font-size: 2rem;
+  }
+
+  &__checkbox-button {
+    margin-right: 1rem;
+  }
+
+  &__submit-btn {
+    display: flex;
+    justify-content: center;
   }
 }
 
-.formbtn__checkbox:checked ~ .quote {
-  width: 100%;
-}
+.submit-btn {
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    position: relative;
+    font-size: 2rem;
+    font-family: $default-font;
+    background-color: $color-primary;
+    color: $color-white;
 
-.formbtn__checkbox:checked ~ .quote__content {
-  height: auto;
-  width: 60%;
-  right: 50%;
-  top: 50%;
-  transform: translate(50%, -50%);
-  visibility: visible;
-  opacity: 1;
-  transition: all 0.2s ease-in;
+    //Change for the <button> element
+    border: none;
+    cursor: pointer;
+  }
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+  // &--white {
+  //   background-color: $color-white;
+  //   color: $color-dark-grey;
+  //   &::after {
+  //     background-color: $color-white;
+  //   }
+  // }
+  // &--green {
+  //   background-color: $color-primary;
+  //   color: $color-white;
+  //   &::after {
+  //     background-color: $color-primary;
+  //   }
+  // }
+
+  &::after {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+  &--animated {
+    animation: moveInUp 1s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
 }
