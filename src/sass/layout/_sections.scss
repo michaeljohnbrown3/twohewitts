@@ -1,6 +1,6 @@
 .section {
   &__aboutus {
-    min-height: 100vh;
+    min-height: calc(100vh - #{$nav-header-connect} - #{$nav-height});
     padding: 0 5%;
     border: 1px;
     display: flex;
@@ -11,11 +11,13 @@
     padding: 2rem;
     &--title {
       margin-bottom: 3rem;
+      margin-top: calc(#{$nav-header-connect} + #{$nav-height});
     }
   }
 }
 
 .aboutus-container {
+  margin-top: calc(#{$nav-header-connect} + #{$nav-height} + 2rem);
   min-height: 70vh;
   width: 100%;
   background-color: $color-white;

@@ -4,7 +4,11 @@ export const aboutUs = document.querySelector('.section__aboutus');
 export const services = document.querySelector('.section__services');
 export const tagline = document.querySelector('.tagline-container');
 export const quote = document.querySelector('.quote-container');
+export const headNav = document.querySelector('.head-nav');
 
 export const headerHeight = header.getBoundingClientRect().height;
+export const headNavHeight = headNav.getBoundingClientRect().height;
 export const aboutUsHeight = aboutUs.getBoundingClientRect().height;
 export const servicesHeight = services.getBoundingClientRect().height;
+
+export const topAlign = headerHeight + headNavHeight;

@@ -12,6 +12,16 @@
   z-index: 50;
   animation: navSlide 1s ease-out;
 
+  @include respond(tab-land) {
+    font-size: 1.4rem;
+  }
+
+  @include respond(tab-port) {
+    flex-wrap: wrap;
+    height: fit-content;
+    animation: dropDown 1s ease-out;
+  }
+
   &__item {
     position: relative;
 
@@ -92,6 +102,10 @@
     text-decoration: none;
     // color: $color-primary;
     color: $color-white;
+
+    @include respond(tab-land) {
+      font-size: 1.5rem;
+    }
   }
 }
 
@@ -108,4 +122,16 @@
   border-left: 2px solid rgba($color-white, 0.8);
   border-right: 2px solid rgba($color-white, 0.8);
   background-color: $color-primary-light;
+
+  @include respond(tab-port) {
+    bottom: 1rem;
+    position: fixed;
+    width: 95%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    height: 5rem;
+    z-index: 2001;
+    animation: slideUp 1s ease-out;
+  }
 }

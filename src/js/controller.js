@@ -9,6 +9,7 @@ import {
   aboutUsHeight,
   tagline,
   quote,
+  headNavHeight,
 } from './views/View';
 
 const init = function () {
