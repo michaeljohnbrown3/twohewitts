@@ -4,6 +4,10 @@
   color: $color-light-grey;
   background-color: $color-dark-grey;
 
+  @include respond(tab-port) {
+    margin-bottom: 4rem;
+  }
+
   &__site-map {
     text-align: center;
     margin-left: auto;

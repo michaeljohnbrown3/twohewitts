@@ -22,7 +22,7 @@
     animation: $header-animation;
 
     &-name {
-      font-family: 'Josefin Sans', sans-serif;
+      font-family: $default-font;
       font-size: 3.2rem;
       border: solid;
       border-width: 0.5rem;
@@ -33,7 +33,7 @@
 
     &-description {
       font-size: 1.6rem;
-      font-family: 'Josefin Sans', san-serif;
+      font-family: $default-font;
       font-style: italic;
       font-weight: 500;
       padding-top: 0.6rem;

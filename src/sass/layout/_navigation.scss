@@ -19,7 +19,6 @@
   @include respond(tab-port) {
     flex-wrap: wrap;
     height: fit-content;
-    animation: dropDown 1s ease-out;
   }
 
   &__item {
@@ -124,14 +123,16 @@
   background-color: $color-primary-light;
 
   @include respond(tab-port) {
-    bottom: 1rem;
+    bottom: 0;
     position: fixed;
-    width: 95%;
+    width: 100vw;
     text-align: center;
     display: flex;
     justify-content: center;
-    height: 5rem;
+    height: 8rem;
     z-index: 2001;
     animation: slideUp 1s ease-out;
+    border-left: none;
+    border-right: none;
   }
 }
