@@ -3,6 +3,8 @@
   font-size: 4rem;
   color: $color-light-grey;
   background-color: $color-dark-grey;
+  z-index: 1003;
+  position: relative;
 
   @include respond(tab-port) {
     margin-bottom: 4rem;

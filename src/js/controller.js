@@ -10,6 +10,9 @@ import {
   tagline,
   quote,
   headNavHeight,
+  galleryLink,
+  galleryLinkText,
+  quoteBack,
 } from './views/View';
 
 const init = function () {
@@ -32,13 +35,32 @@ document.querySelector(
   '.footer__certifications--copyright'
 ).textContent = `${new Date().getFullYear()} T.W.O. Hewitts LLC`;
 
+galleryLink.addEventListener('mouseover', () => {
+  galleryLinkText.textContent = 'coming soon!';
+
+  galleryLink.addEventListener('mouseout', () => {
+    galleryLinkText.textContent = 'gallery';
+  });
+});
+
 document
   .querySelector('.quote-request-btn')
   .addEventListener('click', function (e) {
     e.preventDefault();
     if (quote.classList.contains('hidden-quote')) {
       quote.classList.remove('hidden-quote');
+      quote.style.width = '100vw';
+      quote.style.height = '100vh';
     } else {
       quote.classList.add('hidden-quote');
+      quote.style.width = '0vw';
+      quote.style.height = '0vh';
     }
   });
+
+quoteBack.addEventListener('click', e => {
+  e.preventDefault();
+  quote.classList.add('hidden-quote');
+  quote.style.width = '0vw';
+  quote.style.height = '0vh';
+});

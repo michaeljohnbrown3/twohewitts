@@ -3,6 +3,12 @@ $color-primary: darkblue;
 $color-primary-light: rgb(93, 93, 250);
 $color-primary-dark: rgb(1, 1, 44);
 
+$color-secondary-light: lightgreen;
+$color-secondary-dark: darkgreen;
+
+$color-tertiary-light: lightpink;
+$color-tertiary-dark: pink;
+
 $color-white: #fff;
 $color-black: #000;
 $color-silver: silver;
@@ -11,12 +17,14 @@ $color-light-grey: rgb(168, 168, 168);
 $color-dark-grey: rgb(26, 26, 26);
 $color-background: rgb(253, 229, 198);
 
+$color-grey-light-2: $color-light-grey;
+
 $color-invalid: red;
 
 //Nav border
 $nav-border: thin solid;
 $nav-padding: 0 2rem;
-$nav-height: 4rem;
+$nav-height: 0rem;
 
 //Nav Header connect
 $nav-header-connect: 15vh;

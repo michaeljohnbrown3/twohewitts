@@ -1,18 +1,23 @@
 .quote-container {
-  position: sticky;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 0;
   left: 0;
-  margin-top: calc(#{$nav-header-connect} + #{$nav-height});
   overflow: hidden;
   z-index: 2000;
+  // height: 100vh;
+  // width: 100vw;
+  background-image: url(./../assets/images/img_0581.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 .quote {
-  height: 100vh;
-  width: 100vw;
   overflow: hidden;
-  padding: 5rem 8rem;
-  background-color: $color-primary-light;
+  // padding: 5rem 8rem;
+  // background-color: $color-primary-light;
   display: flex;
   justify-content: center;
 
@@ -20,19 +25,16 @@
     width: 100%;
     max-width: 100%;
     height: 75vh;
-    background-color: green;
-    background-image: url(./../assets/images/lawnmower-STOCK.jpg);
-    background-size: cover;
+    // background-color: green;
   }
 }
 
 .form {
-  background-color: rgba($color-white, 0.5);
+  background-color: rgba($color-white, 0.7);
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  max-width: 60%; ///////////////
   padding: 2rem;
 
   &__group:not(:last-child) {
@@ -94,7 +96,17 @@
     margin-right: 1rem;
   }
 
+  &__btns {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
   &__submit-btn {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__back-btn {
     display: flex;
     justify-content: center;
   }
@@ -134,20 +146,6 @@
     transform: translateY(-0.1rem);
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
   }
-  // &--white {
-  //   background-color: $color-white;
-  //   color: $color-dark-grey;
-  //   &::after {
-  //     background-color: $color-white;
-  //   }
-  // }
-  // &--green {
-  //   background-color: $color-primary;
-  //   color: $color-white;
-  //   &::after {
-  //     background-color: $color-primary;
-  //   }
-  // }
 
   &::after {
     content: '';
@@ -165,4 +163,9 @@
     animation: moveInUp 1s ease-out 0.75s;
     animation-fill-mode: backwards;
   }
+}
+
+.back-btn {
+  background-color: $color-light-grey;
+  color: $color-dark-grey;
 }

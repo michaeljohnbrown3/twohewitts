@@ -18,154 +18,112 @@
             LAWN MAINTENANCE & LANDSCAPING
           </div>
         </a>
-        <!-- <div class="picture-border__tag-line">Making your property your paradise</div> -->
-        <nav class="head-nav">
-          <a href="#section__aboutus" class="head-nav__link">
+        <div class="head-nav">
+          <a href="#aboutus" class="head-nav__link">
             <svg class="head-nav__icon">
               <use xlink:href="./assets/sprite.svg#icon-user"></use>
             </svg>
-            About Us
+              About Us
           </a>
-          <a href="#section__services" class="head-nav__link">
-                <svg class="head-nav__icon">
-                  <use xlink:href="./assets/sprite.svg#icon-tree"></use>
-                </svg>
-                Services
-              </a>
-              <a href="#" class="quote-request-btn">
-                <svg class="head-nav__icon">
-                  <use xlink:href="./assets/sprite.svg#icon-bubble"></use>
-                </svg>
-                Request a quote
-              </a>
-              <a href="./gallery.html" class="head-nav__link">
-                <svg class="head-nav__icon">
-                  <use xlink:href="./assets/sprite.svg#icon-images"></use>
-                </svg>
-                Gallery
-              </a>
-              <a href="tel:4077820019" class="header__phone">
-                <svg class="header__icon">
-                  <use xlink:href="./assets/sprite.svg#icon-phone1"></use>
-                </svg>
-                <p class="head-nav__phone">561-376-9530</p>
-              </a>
-            </nav>
-          </header>
-          <div class="content">
-            <main>
-              <div class="quote-container hidden-quote">
- 
-          
-          <div class="quote">
-            <div class="quote__form">
+          <a href="#services" class="head-nav__link">
+            <svg class="head-nav__icon">
+              <use xlink:href="./assets/sprite.svg#icon-tree"></use>
+            </svg>
+            Services
+          </a>
+          <a href="#" class="head-nav__link head-nav__gallery" id="gallery-link">
+            <svg class="head-nav__icon">
+              <use xlink:href="./assets/sprite.svg#icon-images"></use>
+            </svg>
+            <p id="gallery-link-text">Gallery</p>
+          </a>
+        </div>
+        <a href="tel:4077820019" class="head-nav__link">
+          <svg class="head-nav__icon">
+            <use xlink:href="./assets/sprite.svg#icon-phone1"></use>
+          </svg>
+          <p class="head-nav__link">561-376-9530</p>
+        </a>
+      </header>
+      <div class="content">
+        <main>
+          <div class="quote-container hidden-quote">
+          <!-- <div class="quote-container">     -->
+            <div class="quote">
+              <div class="quote__form">
                 <form action="#" class="form">
-                
-              <div class="form__group">
-                <input type="text" class="form__input" placeholder="Full name" id="name" required>
-                <label for="name" class="form__label">Full name</label>
-              </div>
-              <div class="form__group">
-                <input type="tel" class="form__input" placeholder="Phone number" id="phone" required>
-                <label for="phone" class="form__label">Phone number</label>
-              </div>
-              <div class="form__group">
-                <input type="email" class="form__input" placeholder="Email" id="email" required>
-                <label for="email" class="form__label">Email</label>
-              </div>
-              <div class="form__checkbox-group">
-                <input type="checkbox" class="form__checkbox-input" id="small" name="size">
-                <label for="small" class="form__checkbox-label">
+                <div class="form__group">
+                  <input type="text" class="form__input" placeholder="Full name" id="name" required>
+                  <label for="name" class="form__label">Full name</label>
+                </div>
+                <div class="form__group">
+                  <input type="tel" class="form__input" placeholder="Phone number" id="phone" required>
+                  <label for="phone" class="form__label">Phone number</label>
+                </div>
+                <div class="form__group">
+                  <input type="email" class="form__input" placeholder="Email" id="email" required>
+                  <label for="email" class="form__label">Email</label>
+                </div>
+                <div class="form__checkbox-group">
+                  <input type="checkbox" class="form__checkbox-input" id="small" name="size">
+                  <label for="small" class="form__checkbox-label">
+                      <span class="form__checkbox-button"></span>
+                      Lawn maintenance
+                  </label>
+                </div>
+                <div class="form__checkbox-group">
+                  <input type="checkbox" class="form__checkbox-input" id="large" name="size">
+                  <label for="large" class="form__checkbox-label">
+                      <span class="form__checkbox-button"></span>
+                      Landscaping
+                  </label>
+                </div>
+                <div class="form__checkbox-group">
+                  <input type="checkbox" class="form__checkbox-input" id="large" name="size">
+                  <label for="large" class="form__checkbox-label">
                     <span class="form__checkbox-button"></span>
-                    Lawn maintenance
-                </label>
+                    Other services (please specify in comments)
+                  </label>
+                </div>
+                <div class="form__group">
+                  <input type="text" class="form__input form__other" placeholder="Other comments" id="comments">
+                  <label for="comments" class="form__label">Other comments</label>
+                </div>
+                <div class="form__btns">
+                  <div class="form__submit-btn">
+                    <button class="submit-btn" id="quote-submit">Send request!</button>
+                  </div>
+                  <div class="form__back-btn">
+                    <button class="submit-btn back-btn" id="quote-back">Go back</button>
+                  </div>
+                </div>
+                </form>
               </div>
-              <div class="form__checkbox-group">
-                <input type="checkbox" class="form__checkbox-input" id="large" name="size">
-                <label for="large" class="form__checkbox-label">
-                    <span class="form__checkbox-button"></span>
-                    Landscaping
-                </label>
-              </div>
-              <div class="form__checkbox-group">
-                <input type="checkbox" class="form__checkbox-input" id="large" name="size">
-                <label for="large" class="form__checkbox-label">
-                  <span class="form__checkbox-button"></span>
-                  Other services (please specify in comments)
-                </label>
-              </div>
-              <div class="form__group">
-                <input type="text" class="form__input form__other" placeholder="Other comments" id="comments">
-                <label for="comments" class="form__label">Other comments</label>
-              </div>
-              <div class="form__submit-btn">
-                <button class="submit-btn">Send request!</button>
-              </div>
-            </form>
+            </div>
           </div>
-          </div>
-          </div>
-          <!-- <div class="picture-border">
-            <figure class="picture-border__item">
-              <img
-                src="assets/images/IMG_0002-1.jpg"
-                alt="left picture"
-                class="picture-border__photo"
-              />
-            </figure>
-            <figure class="picture-border__item">
-              <img
-                src="assets/images/IMG_0002-4.jpg"
-                alt="left picture"
-                class="picture-border__photo"
-                />
-            </figure>
-            <figure class="picture-border__item">
-              <img
-                src="assets/images/IMG_0002-3.jpg"
-                alt="left picture"
-                class="picture-border__photo"
-              />
-            </figure>
-            <figure class="picture-border__item">
-              <img
-                src="assets/images/IMG_0002-2.jpg"
-                alt="left picture"
-                class="picture-border__photo"
-              />
-            </figure>
-          </div> -->
+          
           <!--LANDING PAGE-->
           <!--TAGLINE CONTAINER-->
           <div class="tagline-container">
             <div class="tagline-container__text">
               Making YOUR property YOUR paradise
             </div>
-            <!-- <div class="tagline-container__collage">
-              <img
-                src="./assets/images/IMG_0002-1.jpg"
-                alt="Photo 1"
-                class="tagline-container__collage--photo tagline-container__collage--photo-1"
-              />
-              <img
-                src="./assets/images/IMG_0002-2.jpg"
-                alt="Photo 2"
-                class="tagline-container__collage--photo tagline-container__collage--photo-2"
-              />
-              <img
-                src="./assets/images/IMG_0002-3.jpg"
-                alt="Photo 3"
-                class="tagline-container__collage--photo tagline-container__collage--photo-3"
-              />
-            </div> -->
+            <div class="quote-btn-container quote-btn-container__fixed">
+              <a href="#" class="quote-request-btn">
+                <svg class="head-nav__icon">
+                  <use xlink:href="./assets/sprite.svg#icon-bubble"></use>
+                </svg>
+                Request a quote
+              </a>
+            </div>
           </div>
           <!--ABOUT US-->
           <div class="landing-page">
-            <div class="section__aboutus" id="section__aboutus">
+            <div class="section__aboutus" id="aboutus">
               <div class="aboutus-container">
                 <div class="aboutus-container__photo">
                   <img
-                    src="./assets/images/lawnmower-STOCK.jpg"
+                    src="./assets/images/IMG_0578.jpg"
                     alt="Photo 1"
                     class="aboutus-container__photo--file"
                   />
@@ -178,127 +136,128 @@
                     landscaping. We are licensed and fully insured.
                   </p>
                 </div>
+                <div class="aboutus-container__photo">
+                  <img
+                    src="./assets/images/IMG_0266.jpg"
+                    alt="Photo 1"
+                    class="aboutus-container__photo--file"
+                  />
+                </div>
               </div>
             </div>
             <!--SERVICES-->
-            <div class="section__services" id="section__services">
+            <div class="section__services" id="services">
               <div class="heading-secondary white section__services--title">Services</div>
               <div class="services">
-                <div class="services__container services__container--left">
-                  <h2 class="services__heading">Premium lawn services</h2>
-                  <img
-                    src="./assets/images/lawnmower-half-STOCK.jpg"
+                <div class="services__container">
+                  <div class="card">
+                    <div class="card__side card__side--front">
+                      <h2 class="services__heading">Premium lawn services</h2>
+                      <img
+                    src="./assets/images/IMG_0264.JPG"
                     alt="Lawnmowing"
                     class="services__photo"
                   />
-                  <p class="services__text">We provide lawn maintenance services by the month or per cut. We cater to each property, as all properties have different needs. T.W.O. Hewitt’s, Inc. will always strive to meet customers needs when it comes to the frequency, individuality, and quality of the services we provide.</p>
+                    </div>
+                    <div class="card__side card__side--back card__side--back-1">
+                      <h2 class="services__heading">Premium lawn services</h2>
+                      <p class="services__text">We provide lawn maintenance services by the month or per cut. We cater to each property, as all properties have different needs. T.W.O. Hewitt’s, Inc. will always strive to meet customers needs when it comes to the frequency, individuality, and quality of the services we provide.</p>
+                      <div class="quote-btn-container">
+                        <a href="#" class="quote-request-btn">
+                          <svg class="head-nav__icon">
+                            <use xlink:href="./assets/sprite.svg#icon-bubble"></use>
+                          </svg>
+                          Request a quote
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="services__container services__container--right">
-                  <h2 class="services__heading">Innovative landscaping</h2>
-                  <img
-                    src="./assets/images/landscape-STOCK.jpg"
+                <div class="services__container">
+                  <div class="card">
+                    <div class="card__side card__side--front">
+                      <h2 class="services__heading">Innovative landscaping</h2>
+                      <img
+                    src="./assets/images/IMG_1018.jpg"
                     alt="Landscaping"
                     class="services__photo"
                   />
-                  <p class="services__text">T.W.O. Hewitts, Inc. offers landscape design and installation. We take the time to meet with the customer to bring their ideas to fruition. From start to finish, we make sure the job is done right!</p>
+                    </div>
+                    <div class="card__side card__side--back card__side--back-2">
+                      <h2 class="services__heading">Innovative landscaping</h2>
+                      <p class="services__text">T.W.O. Hewitts, Inc. offers landscape design and installation. We take the time to meet with the customer to bring their ideas to fruition. From start to finish, we make sure the job is done right!</p>
+                      <div class="quote-btn-container">
+                        <a href="#" class="quote-request-btn">
+                          <svg class="head-nav__icon">
+                            <use xlink:href="./assets/sprite.svg#icon-bubble"></use>
+                          </svg>
+                          Request a quote
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="other-services">
-                <ul class="other-services__list">
-                  <li class="other-services__list--title services__heading">Other Services</li>
-                  <li class="other-services__list--item">Irrigation Design, Installation, and Maintenance</li>
-                  <li class="other-services__list--item">Landscape Lighting</li>
-                  <li class="other-services__list--item">Fence Repair and Gate Installation</li>
-                  <li class="other-services__list--item">Fountain and Water Features</li>
-                  <li class="other-services__list--item">Artificial Turf</li>
-                  <li class="other-services__list--item">Hardscapes</li>
-                  <li class="other-services__list--item">Artificial Ivy Walls</li>
-              <!---    <li class="other-services__list--item">Fertilization</li> -->
-
-                </ul>
-              </div>
+                <div class="services__container">
+                  <div class="card">
+                    <div class="card__side card__side--front">
+                      <h2 class="services__heading">Other Services</h2>
+                      <img
+                    src="./assets/images/IMG_0215.JPG"
+                    alt="Landscaping"
+                    class="services__photo"
+                  />
+                    </div>
+                    <div class="card__side card__side--back  card__side--back-3">
+                      <h2 class="services__heading">Other Services</h2>
+                      <ul class="other-services__list">
+                        <li class="other-services__list--item">Irrigation Design, Installation, and Maintenance</li>
+                        <li class="other-services__list--item">Landscape Lighting</li>
+                        <li class="other-services__list--item">Fence Repair and Gate Installation</li>
+                        <li class="other-services__list--item">Fountain and Water Features</li>
+                        <li class="other-services__list--item">Artificial Turf</li>
+                        <li class="other-services__list--item">Hardscapes</li>
+                        <li class="other-services__list--item">Artificial Ivy Walls</li>
+                        <!---    <li class="other-services__list--item">Fertilization</li> -->
+                      </ul>
+                      <div class="quote-btn-container">
+                        <a href="#" class="quote-request-btn">
+                          <svg class="head-nav__icon">
+                            <use xlink:href="./assets/sprite.svg#icon-bubble"></use>
+                          </svg>
+                          Request a quote
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
             </div>
-              
-              
-              <!-- <div
-                class="row u-center-text u-padding-top-large u-margin-bottom-medium"
-              >
-                <div class="col-1-of-2">
-                  <h2 class="heading-secondary u-padding-bottom-small">
-                    Premium lawn services
-                  </h2>
-                </div>
-                <div class="col-1-of-2">
-                  <img
-                    class="collage__photo"
-                    src="./assets/images/IMG_0001.jpg"
-                    alt="Lawn Picture #1"
-                  />
-                  <img
-                    class="collage__photo"
-                    src="./assets/images/IMG_0003.jpg"
-                    alt="Lawn Picture #2"
-                  />
-                </div> -->
-              <!-- <div
-                class="row u-center-text u-padding-top-small u-padding-bottom-large"
-              >
-                <div class="col-1-of-2">
-                  <h2 class="heading-secondary u-padding-bottom-medium">
-                    Innovative landscaping
-                  </h2>
-                </div>
-                <div class="col-1-of-2">
-                  <img
-                    class="collage__photo"
-                    src="./assets/images/IMG_0001.jpg"
-                    alt="Lawn Picture #1"
-                  />
-                  <img
-                    class="collage__photo"
-                    src="./assets/images/IMG_0003.jpg"
-                    alt="Lawn Picture #2"
-                  />
-                </div> -->
+            </div>
               </div>
             </div>
             
             <!--FOOTER-->
           <footer class="footer">
             <div class="row u-center-text">
-              <div class="col-1-of-2">
+              <div>
                 <div class="footer__certifications">
                   <span>&copy; </span><span class="footer__certifications--copyright"></span>
                 </div>
               </div>
               <div class="col-1-of-2">
-                <div class="footer__social-media">
+                <!-- <div class="footer__social-media">
                   <svg viewBox="0 0 100 100" fill="rgb(168, 168, 168">
                     <use
                     xlink:href="assets/sprite.svg#icon-instagram1"
                     class="footer__social-media--logo"
                     ></use>
                   </svg>
-                </div>
+                </div> -->
               </div>
             </div>
           </footer>
         </div>
         </main>
       </div>
-
-      <!-- 
-        Add checkbox options: 
-        Lawn maintanence
-        Landscaping 
-        Other services
-        
-        
-        
-        
-        
-        "make it your paradise"
-        -->
     </div>
     <script src="./js/controller.js"></script>
   </body>

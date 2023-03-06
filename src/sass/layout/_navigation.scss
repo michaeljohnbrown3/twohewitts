@@ -1,16 +1,16 @@
 .head-nav {
-  position: fixed;
+  // position: fixed;
   display: flex;
-  justify-content: center;
-  top: $nav-header-connect;
-  width: 100vw;
-  height: $nav-height;
-  background-color: $color-dark-grey;
-  font-size: 1.7rem;
-  font-style: italic;
-  list-style: none;
-  z-index: 50;
-  animation: navSlide 1s ease-out;
+  // justify-content: center;
+  // top: $nav-header-connect;
+  // width: 100vw;
+  // height: $nav-height;
+  // background-color: $color-dark-grey;
+  // font-size: 1.7rem;
+  // font-style: italic;
+  // list-style: none;
+  // z-index: 50;
+  // animation: navSlide 1s ease-out;
 
   @include respond(tab-land) {
     font-size: 1.4rem;
@@ -56,6 +56,9 @@
     color: $color-white;
     text-decoration: none;
     text-transform: uppercase;
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: bold;
     display: block;
     padding: 1.5rem 3rem;
     display: flex;
@@ -64,6 +67,7 @@
     z-index: 10;
     &:hover {
       background-color: $color-primary-light;
+      transform: translateY(-0.1rem);
     }
 
     // @media only screen and (max-width: $bp-medium) {
@@ -106,33 +110,81 @@
       font-size: 1.5rem;
     }
   }
+
+  &__gallery:link,
+  &__gallery:visited {
+    &:hover {
+      background-color: white;
+      color: $color-primary;
+    }
+  }
+}
+
+.quote-btn-container {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  border-radius: 10rem;
+
+  &__fixed {
+    position: relative;
+    // bottom: 2rem;
+    // right: 8rem;
+    // left: 50%;
+    // transform: translateX(-50%);
+    z-index: 1000;
+  }
 }
 
 .quote-request-btn {
-  font-style: italic;
-  font-size: 1.8rem;
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase;
-  list-style: none;
-  padding: 0 3rem;
-  display: flex;
-  align-items: center;
-  border-left: 2px solid rgba($color-white, 0.8);
-  border-right: 2px solid rgba($color-white, 0.8);
-  background-color: $color-primary-light;
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    position: relative;
+    font-size: 2rem;
+    font-family: $default-font;
+    background-color: $color-primary;
+    color: $color-white;
 
-  @include respond(tab-port) {
-    bottom: 0;
-    position: fixed;
-    width: 100vw;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    height: 8rem;
-    z-index: 2001;
-    animation: slideUp 1s ease-out;
-    border-left: none;
-    border-right: none;
+    //Change for the <button> element
+    border: none;
+    cursor: pointer;
+  }
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+
+  &::after {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+  &--animated {
+    animation: moveInUp 1s ease-out 0.75s;
+    animation-fill-mode: backwards;
   }
 }
