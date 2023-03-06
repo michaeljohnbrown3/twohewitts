@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/michaeljohnbrown3/twohewitts#readme",
   "devDependencies": {
+    "@parcel/transformer-image": "^2.8.3",
     "@parcel/transformer-sass": "^2.8.3",
     "autoprefixer": "^10.4.7",
     "concat": "^1.0.3",
