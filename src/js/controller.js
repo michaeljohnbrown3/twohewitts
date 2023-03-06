@@ -100,7 +100,7 @@ const sendEmail = function () {
         ? ''
         : `The requester made the following comments: ${quoteComments.value}`
     }`,
-  }).then(message => (message === 'OK' ? '' : alert(message)));
+  }).then(message => (message == 'OK' ? '' : alert(message)));
 };
 
 form.addEventListener('submit', e => {
