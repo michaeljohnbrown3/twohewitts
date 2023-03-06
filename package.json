@@ -18,12 +18,12 @@
   },
   "homepage": "https://github.com/michaeljohnbrown3/twohewitts#readme",
   "devDependencies": {
-    "@parcel/resolver-glob": "^2.8.3",
     "@parcel/transformer-sass": "^2.8.3",
     "parcel": "^2.8.3",
     "parcel-bundler": "^1.12.5"
   },
   "dependencies": {
+    "@parcel/resolver-glob": "^2.8.3",
     "core-js": "^3.29.0"
   }
 }
