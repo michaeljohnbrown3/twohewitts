@@ -1,5 +1,4 @@
 .tagline-container {
-  //   background-color: $color-white;
   background-image: linear-gradient(
       to right bottom,
       rgba($color-lightest-grey, 0.7),
@@ -28,8 +27,6 @@
     align-self: center;
     color: $color-primary;
     text-shadow: 0 0 10px $color-dark-grey;
-    // text-transform: uppercase;
-    // position: relative;
   }
   &__collage {
     display: flex;

@@ -1,16 +1,5 @@
 .head-nav {
-  // position: fixed;
   display: flex;
-  // justify-content: center;
-  // top: $nav-header-connect;
-  // width: 100vw;
-  // height: $nav-height;
-  // background-color: $color-dark-grey;
-  // font-size: 1.7rem;
-  // font-style: italic;
-  // list-style: none;
-  // z-index: 50;
-  // animation: navSlide 1s ease-out;
 
   @include respond(tab-port) {
     height: fit-content;
@@ -86,16 +75,6 @@
       width: 1.5rem;
       height: 1.5rem;
     }
-
-    // @include respond(skinny) {
-    //   display: none;
-    // }
-    // @media only screen and (max-width: $bp-small) {
-    //     margin-right: 0;
-    //     margin-bottom: .7rem;
-    //     width: 1.5rem;
-    //     height: 1.5rem;
-    // }
   }
 
   &__phone:link,
@@ -105,9 +84,7 @@
     font-size: 2.5rem;
     font-style: italic;
     font-weight: bold;
-    // opacity: 0;
     text-decoration: none;
-    // color: $color-primary;
     color: $color-white;
 
     @include respond(tab-land) {
@@ -138,10 +115,6 @@
 
   &__fixed {
     position: relative;
-    // bottom: 2rem;
-    // right: 8rem;
-    // left: 50%;
-    // transform: translateX(-50%);
     z-index: 1000;
   }
 }
