@@ -28,12 +28,17 @@
   @include respond(phone) {
     flex-direction: column-reverse;
     justify-content: center;
-    padding: 2rem 0;
+    padding: 0 0;
   }
 
   &__photo {
     height: auto;
     width: 50%;
+
+    @include respond(tab-port) {
+      width: 75%;
+      margin-bottom: 2rem;
+    }
 
     &--file {
       position: relative;
@@ -42,6 +47,12 @@
       overflow: hidden;
       border-radius: 5px;
     }
+
+    &--1 {
+      @include respond(tab-port) {
+        display: none;
+      }
+    }
   }
 
   &__text {
@@ -49,7 +60,7 @@
 
     @include respond(phone) {
       width: 80%;
-      margin-bottom: 2rem;
+      // margin-bottom: 2rem;
     }
 
     &--title {
@@ -104,7 +115,7 @@
   }
 
   &__photo {
-    width: auto;
+    max-width: 90%;
     height: 80%;
     border-radius: 2px;
   }

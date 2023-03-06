@@ -38,65 +38,64 @@
             <p id="gallery-link-text">Gallery</p>
           </a>
         </div>
-        <a href="tel:4077820019" class="head-nav__link">
+        <a href="tel:4077820019" class="head-nav__link head-nav__phone">
           <svg class="head-nav__icon">
             <use xlink:href="./assets/sprite.svg#icon-phone1"></use>
           </svg>
-          <p class="head-nav__link">561-376-9530</p>
+          <p class="head-nav__phone-text">561-376-9530</p>
         </a>
       </header>
       <div class="content">
         <main>
           <div class="quote-container hidden-quote">
-          <!-- <div class="quote-container">     -->
             <div class="quote">
               <div class="quote__form">
                 <form action="#" class="form">
-                <div class="form__group">
-                  <input type="text" class="form__input" placeholder="Full name" id="name" required>
-                  <label for="name" class="form__label">Full name</label>
-                </div>
-                <div class="form__group">
-                  <input type="tel" class="form__input" placeholder="Phone number" id="phone" required>
-                  <label for="phone" class="form__label">Phone number</label>
-                </div>
-                <div class="form__group">
-                  <input type="email" class="form__input" placeholder="Email" id="email" required>
-                  <label for="email" class="form__label">Email</label>
-                </div>
-                <div class="form__checkbox-group">
-                  <input type="checkbox" class="form__checkbox-input" id="small" name="size">
-                  <label for="small" class="form__checkbox-label">
-                      <span class="form__checkbox-button"></span>
-                      Lawn maintenance
-                  </label>
-                </div>
-                <div class="form__checkbox-group">
-                  <input type="checkbox" class="form__checkbox-input" id="large" name="size">
-                  <label for="large" class="form__checkbox-label">
-                      <span class="form__checkbox-button"></span>
-                      Landscaping
-                  </label>
-                </div>
-                <div class="form__checkbox-group">
-                  <input type="checkbox" class="form__checkbox-input" id="large" name="size">
-                  <label for="large" class="form__checkbox-label">
-                    <span class="form__checkbox-button"></span>
-                    Other services (please specify in comments)
-                  </label>
-                </div>
-                <div class="form__group">
-                  <input type="text" class="form__input form__other" placeholder="Other comments" id="comments">
-                  <label for="comments" class="form__label">Other comments</label>
-                </div>
-                <div class="form__btns">
-                  <div class="form__submit-btn">
-                    <button class="submit-btn" id="quote-submit">Send request!</button>
+                  <div class="form__group">
+                    <input type="text" class="form__input" placeholder="Full name" id="name" required>
+                    <label for="name" class="form__label">Full name</label>
                   </div>
-                  <div class="form__back-btn">
-                    <button class="submit-btn back-btn" id="quote-back">Go back</button>
+                  <div class="form__group">
+                    <input type="tel" class="form__input" placeholder="Phone number" id="phone" required>
+                    <label for="phone" class="form__label">Phone number</label>
                   </div>
-                </div>
+                  <div class="form__group">
+                    <input type="email" class="form__input" placeholder="Email" id="email" required>
+                    <label for="email" class="form__label">Email</label>
+                  </div>
+                  <div class="form__checkbox-group">
+                    <input type="checkbox" class="form__checkbox-input" id="maintenance" name="size">
+                    <label for="maintenance" class="form__checkbox-label">
+                        <span class="form__checkbox-button"></span>
+                        Lawn maintenance
+                    </label>
+                  </div>
+                  <div class="form__checkbox-group">
+                    <input type="checkbox" class="form__checkbox-input" id="design" name="size">
+                    <label for="design" class="form__checkbox-label">
+                        <span class="form__checkbox-button"></span>
+                        Landscape design
+                    </label>
+                  </div>
+                  <div class="form__checkbox-group">
+                    <input type="checkbox" class="form__checkbox-input" id="other" name="size">
+                    <label for="other" class="form__checkbox-label">
+                      <span class="form__checkbox-button"></span>
+                      Other services (please specify in comments)
+                    </label>
+                  </div>
+                  <div class="form__group">
+                    <input type="text" class="form__input form__other" placeholder="Other comments" id="comments">
+                    <label for="comments" class="form__label">Other comments</label>
+                  </div>
+                  <div class="form__btns">
+                    <div class="form__submit-btn">
+                      <button class="submit-btn" id="quote-submit">Send request!</button>
+                    </div>
+                    <div class="form__back-btn">
+                      <button class="submit-btn back-btn" id="quote-back">Go back</button>
+                    </div>
+                  </div>
                 </form>
               </div>
             </div>
@@ -121,7 +120,7 @@
           <div class="landing-page">
             <div class="section__aboutus" id="aboutus">
               <div class="aboutus-container">
-                <div class="aboutus-container__photo">
+                <div class="aboutus-container__photo aboutus-container__photo--1">
                   <img
                     src="./assets/images/IMG_0578.jpg"
                     alt="Photo 1"
@@ -259,6 +258,7 @@
         </main>
       </div>
     </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="./js/controller.js"></script>
   </body>
 </html>
