@@ -49,21 +49,6 @@
       }
     }
 
-    &--photo-1 {
-      //   right: 24rem;
-      //   top: 1rem;
-    }
-
-    &--photo-2 {
-      //   left: -1rem;
-      //   top: 2rem;
-    }
-
-    &--photo-3 {
-      //   left: 0rem;
-      //   top: -1rem;
-    }
-
     &:hover &__photo:not(:hover) {
       transform: scale(0.6);
     }

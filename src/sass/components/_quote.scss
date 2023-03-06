@@ -87,9 +87,6 @@
     margin-bottom: 0.8rem;
   }
 
-  &__checkbox-input {
-  }
-
   &__checkbox-label {
     font-family: $default-font;
     font-size: 2rem;
@@ -169,6 +166,6 @@
 }
 
 .back-btn {
-  background-color: $color-light-grey;
+  background-color: $color-lightest-grey;
   color: $color-dark-grey;
 }
