@@ -18,7 +18,7 @@
 
 .aboutus-container {
   margin-top: calc(#{$nav-header-connect} + #{$nav-height} + 2rem);
-  height: 80vh;
+  height: 70vh;
   width: 100%;
   max-width: 100rem;
   background-color: $color-white;
@@ -36,7 +36,7 @@
   background-position: center;
 
   @include respond(tab-land) {
-    height: 70vh;
+    height: 45rem;
     margin-top: calc(#{$nav-header-connect} + #{$nav-height} + 4rem);
   }
 
@@ -63,7 +63,7 @@
       overflow: clip;
     }
 
-    @include respond(phone) {
+    @include respond(phone-large) {
       display: none;
     }
   }
