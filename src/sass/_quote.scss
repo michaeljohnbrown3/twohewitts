@@ -62,6 +62,11 @@
     &:focus:invalid {
       border: 3px solid $color-invalid;
     }
+
+    @include respond(tab-port) {
+      font-size: 1rem;
+      padding: 0.6rem 1.2rem;
+    }
   }
 
   &__label {
@@ -71,6 +76,10 @@
     margin-top: 0.7rem;
     display: block;
     transition: all 0.3s;
+
+    @include respond(tab-port) {
+      font-size: 1rem;
+    }
   }
 
   &__input:placeholder-shown + &__label {
@@ -86,6 +95,10 @@
   &__checkbox-label {
     font-family: $default-font;
     font-size: 2rem;
+
+    @include respond(tab-port) {
+      font-size: 1.2rem;
+    }
   }
 
   &__checkbox-button {

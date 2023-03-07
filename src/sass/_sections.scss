@@ -13,6 +13,10 @@
     &--title {
       margin-top: calc(#{$nav-header-connect} + #{$nav-height}+ 2rem);
     }
+
+    @include respond(tab-port) {
+      max-width: 80rem;
+    }
   }
 }
 
