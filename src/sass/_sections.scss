@@ -41,9 +41,9 @@
   }
 
   @include respond(phone) {
-    flex-direction: column-reverse;
     justify-content: center;
-    padding: 0 0;
+    align-items: center;
+    height: 60rem;
   }
 
   &__photo {
@@ -61,13 +61,10 @@
       height: 20rem;
       width: 20rem;
       overflow: clip;
-      // border-radius: 5px;
     }
 
-    &--1 {
-      @include respond(tab-port) {
-        display: none;
-      }
+    @include respond(phone) {
+      display: none;
     }
   }
 
@@ -87,10 +84,6 @@
       rgba($color-lightest-grey, 0.8)
     );
 
-    @include respond(phone) {
-      width: 80%;
-    }
-
     &--title {
       font-family: $default-font;
       text-transform: uppercase;
@@ -103,12 +96,13 @@
       font-size: 2.2rem;
       font-style: italic;
       text-align: justify;
+    }
 
-      @include respond(phone) {
-        text-align: center;
-        font-family: $default-font;
-        font-style: normal;
-      }
+    @include respond(phone) {
+      height: 40rem;
+      width: 100%;
+      -webkit-clip-path: polygon(0 5rem, 100% 3rem, 100% 38rem, 0 100%);
+      clip-path: polygon(0 5rem, 100% 3rem, 100% 38rem, 0 100%);
     }
   }
 }
@@ -119,10 +113,6 @@
   align-items: center;
   margin: 3rem 0;
   max-width: 100rem;
-
-  @include respond(tab-port) {
-    flex-wrap: wrap;
-  }
 
   @include respond(phone) {
     flex-direction: column;
@@ -158,6 +148,11 @@
     width: 100%;
     transition: 0.3s ease-in;
 
+    @include respond(tab-land) {
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
     @include respond(phone) {
       width: 90%;
       margin-bottom: 2rem;
@@ -175,6 +170,10 @@
     font-family: $cursive-font;
     font-size: 2rem;
     margin: 2rem;
+
+    @include respond(tab-land) {
+      font-size: 1.5rem;
+    }
 
     @include respond(phone) {
       text-align: center;
@@ -200,6 +199,10 @@
     &--item {
       font-family: $cursive-font;
       font-size: 2rem;
+
+      @include respond(tab-land) {
+        font-size: 1.5rem;
+      }
 
       @include respond(phone) {
         text-align: center;
