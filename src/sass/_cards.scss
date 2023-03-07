@@ -96,6 +96,15 @@
             rgba($color-lightest-grey, 0.7)
           ),
           url(../assets/images/IMG_0264.jpg);
+
+        @include respond(tab-land) {
+          background-image: linear-gradient(
+            to right bottom,
+            rgba($color-lightest-grey, 0.7),
+            rgba($color-lightest-grey, 0.7)
+          );
+          background-color: transparent;
+        }
       }
 
       &-2 {
@@ -105,6 +114,14 @@
             rgba($color-lightest-grey, 0.7)
           ),
           url(../assets/images/IMG_1018.jpg);
+        @include respond(tab-land) {
+          background-image: linear-gradient(
+            to right bottom,
+            rgba($color-lightest-grey, 0.7),
+            rgba($color-lightest-grey, 0.7)
+          );
+          background-color: transparent;
+        }
       }
 
       &-3 {
@@ -114,6 +131,14 @@
             rgba($color-lightest-grey, 0.7)
           ),
           url(../assets/images/IMG_0215.jpg);
+        @include respond(tab-land) {
+          background-image: linear-gradient(
+            to right bottom,
+            rgba($color-lightest-grey, 0.7),
+            rgba($color-lightest-grey, 0.7)
+          );
+          background-color: transparent;
+        }
       }
     }
   }
