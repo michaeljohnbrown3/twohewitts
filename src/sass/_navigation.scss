@@ -68,7 +68,7 @@
   &__icon {
     width: 2rem;
     height: 2rem;
-    margin-right: 2rem;
+    margin-right: 1rem;
     fill: currentColor;
 
     @include respond(phone) {
@@ -126,6 +126,7 @@
     text-transform: uppercase;
     text-decoration: none;
     padding: 1rem 2rem;
+    width: auto;
     display: inline-block;
     border-radius: 10rem;
     transition: all 0.2s;

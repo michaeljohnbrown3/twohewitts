@@ -70,7 +70,11 @@ quoteRequestBtn.forEach(btn => {
 });
 
 quoteBack.addEventListener('click', e => {
-  location.reload();
+  e.preventDefault();
+  quote.classList.add('hidden-quote');
+  quote.style.width = '0vw';
+  quote.style.height = '0vh';
+  form.reset();
 });
 
 const sendEmail = function () {
@@ -105,9 +109,7 @@ const sendEmail = function () {
 
 form.addEventListener('submit', e => {
   e.preventDefault();
-  console.log('Form submitted!');
-  console.log(time.date);
-  sendEmail();
+  // sendEmail(); /// comment this out for dev purposes
   quoteSubmit.style.backgroundColor = 'darkgrey';
   quoteSubmit.innerHTML = 'sending...';
   setTimeout(() => {
@@ -115,6 +117,6 @@ form.addEventListener('submit', e => {
     quoteSubmit.innerHTML = `request sent!`;
   }, 2500);
   setTimeout(() => {
-    location.reload();
-  }, 4500);
+    form.submit();
+  }, 4000);
 });

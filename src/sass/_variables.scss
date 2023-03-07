@@ -37,7 +37,7 @@ $gutter-horizontal: 6rem;
 // Font
 
 $default-font: 'Josefin', sans-serif;
-$cursive-font: 'Satify', cursive;
+$cursive-font: 'Satify', 'Josefin', sans-serif;
 
 // Animation
 $header-animation: moveInDown 1.1s ease-out;
