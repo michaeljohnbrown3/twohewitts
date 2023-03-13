@@ -48,4 +48,10 @@
       @content;
     } //1800px
   }
+
+  @if $breakpoint == horiz-phone {
+    @media only screen and (max-height: 25em) {
+      @content;
+    } //400px height
+  }
 }
