@@ -34,6 +34,13 @@ const init = function () {
 };
 init();
 
+const closeQuote = function () {
+  quote.classList.add('hidden-quote');
+  quote.style.width = '0vw';
+  quote.style.height = '0vh';
+  form.reset();
+};
+
 document.querySelector('.head-nav').addEventListener('click', function (e) {
   e.preventDefault();
   if (e.target.classList.contains('head-nav__link')) {
@@ -71,13 +78,12 @@ quoteRequestBtn.forEach(btn => {
 
 quoteBack.addEventListener('click', e => {
   e.preventDefault();
-  quote.classList.add('hidden-quote');
-  quote.style.width = '0vw';
-  quote.style.height = '0vh';
-  form.reset();
+  closeQuote();
 });
 
 const sendEmail = function () {
+  // This is created in
+
   Email.send({
     SecureToken: '855468f7-42a8-49ee-bc80-44688872003e',
     To: 'michaeljohnbrown3@gmail.com',
@@ -109,14 +115,16 @@ const sendEmail = function () {
 
 form.addEventListener('submit', e => {
   e.preventDefault();
-  // sendEmail(); /// comment this out for dev purposes
+  sendEmail(); /// comment this out for dev purposes
   quoteSubmit.style.backgroundColor = 'darkgrey';
   quoteSubmit.innerHTML = 'sending...';
   setTimeout(() => {
     quoteSubmit.style.backgroundColor = 'green';
     quoteSubmit.innerHTML = `request sent!`;
+    form.submit();
+    form.reset();
   }, 2500);
   setTimeout(() => {
-    form.submit();
+    closeQuote();
   }, 4000);
 });
