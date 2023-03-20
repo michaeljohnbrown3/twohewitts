@@ -86,7 +86,7 @@ const sendEmail = function () {
 
   Email.send({
     SecureToken: '855468f7-42a8-49ee-bc80-44688872003e',
-    To: 'michaeljohnbrown3@gmail.com',
+    To: 'jasonslawns95@outlook.com',
     From: 'michaeljohnbrown3@gmail.com',
     Subject: 'Quote Requested!',
     Body: `You have received a request for a quote from ${quoteName.value} at ${
