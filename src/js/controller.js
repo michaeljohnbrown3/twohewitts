@@ -51,7 +51,7 @@ document.querySelector('.head-nav').addEventListener('click', function (e) {
 
 document.querySelector(
   '.footer__certifications--copyright'
-).textContent = `${new Date().getFullYear()} T.W.O. Hewitts LLC`;
+).textContent = `${new Date().getFullYear()} TWO Hewitts, Inc.`;
 
 galleryLink.addEventListener('mouseover', () => {
   galleryLinkText.textContent = 'coming soon!';
