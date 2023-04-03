@@ -28,7 +28,7 @@
   background-color: $color-white;
   position: relative;
   display: flex;
-  justify-content: right;
+  justify-content: flex-end;
   box-shadow: 0 0 10px 0px $color-dark-grey;
   background-image: linear-gradient(
       to right bottom,
