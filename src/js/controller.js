@@ -53,14 +53,6 @@ document.querySelector(
   '.footer__certifications--copyright'
 ).textContent = `${new Date().getFullYear()} TWO Hewitts, Inc.`;
 
-galleryLink.addEventListener('mouseover', () => {
-  galleryLinkText.textContent = 'coming soon!';
-
-  galleryLink.addEventListener('mouseout', () => {
-    galleryLinkText.textContent = 'gallery';
-  });
-});
-
 quoteRequestBtn.forEach(btn => {
   btn.addEventListener('click', function (e) {
     e.preventDefault();
