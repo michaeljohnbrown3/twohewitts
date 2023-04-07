@@ -1,3 +1,4 @@
+/*
 const route = event => {
   event = event || window.event;
   event.preventDefault();
@@ -5,9 +6,9 @@ const route = event => {
 };
 
 const routes = {
-  404: '/src/pages/404.html',
-  '/': '/src/pages/index.html',
-  '/gallery': '/src/pages/gallery.html',
+  404: '../pages/404.html',
+  '/': '../pages/main.html',
+  '/gallery': '../pages/gallery.html',
 };
 
 const handleLocation = async () => {
@@ -21,3 +22,23 @@ window.onpopstate = handleLocation;
 window.route = route;
 
 handleLocation();
+*/
+const contentContainer = document.querySelector('#content');
+async function load() {
+  const page = await import('./views/mainView');
+  // Render page
+  const content = page.render();
+  contentContainer.innerHTML = content;
+}
+load();
+
+const galleryLink = document.querySelector('#gallery-link');
+galleryLink.addEventListener('click', e => {
+  e.preventDefault();
+  async function loadGallery() {
+    const page = await import('./views/galleryView');
+    const content = page.render();
+    contentContainer.innerHTML = content;
+  }
+  loadGallery();
+});

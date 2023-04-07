@@ -4,7 +4,9 @@
   color: $color-light-grey;
   background-color: $color-dark-grey;
   z-index: 1003;
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
 
   @include respond(tab-port) {
     margin-bottom: 4rem;
