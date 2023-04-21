@@ -1,0 +1,114 @@
+[
+  {
+    "photoNumber": "1",
+    "url": "https://dl.dropbox.com/s/h2g433dy937vpw2/IMG_0088.jpg?dl=0",
+    "placement": {
+      "fountains": false,
+      "gatesAndFences": false,
+      "landscapeLighting": false,
+      "plantsInDecorativePots": false,
+      "plantsShadeTolerant": true,
+      "plantsSunTolerant": false,
+      "rocksBouldersPaversAndMulch": false,
+      "turfAndArtificialIvy": false
+    }
+  },
+  {
+    "photoNumber": "2",
+    "url": "https://dl.dropbox.com/s/dnpzdlwc8y3hk5j/IMG_0149_thumb.jpg?dl=0",
+    "placement": {
+      "fountains": true,
+      "gatesAndFences": false,
+      "landscapeLighting": false,
+      "plantsInDecorativePots": false,
+      "plantsShadeTolerant": false,
+      "plantsSunTolerant": false,
+      "rocksBouldersPaversAndMulch": false,
+      "turfAndArtificialIvy": false
+    }
+  },
+  {
+    "photoNumber": "3",
+    "url": "https://dl.dropbox.com/s/h2g433dy937vpw2/IMG_0088.jpg?dl=0",
+    "placement": {
+      "fountains": false,
+      "gatesAndFences": false,
+      "landscapeLighting": false,
+      "plantsInDecorativePots": false,
+      "plantsShadeTolerant": false,
+      "plantsSunTolerant": false,
+      "rocksBouldersPaversAndMulch": false,
+      "turfAndArtificialIvy": false
+    }
+  },
+  {
+    "photoNumber": "4",
+    "url": "https://dl.dropbox.com/s/h2g433dy937vpw2/IMG_0088.jpg?dl=0",
+    "placement": {
+      "fountains": false,
+      "gatesAndFences": false,
+      "landscapeLighting": false,
+      "plantsInDecorativePots": false,
+      "plantsShadeTolerant": false,
+      "plantsSunTolerant": false,
+      "rocksBouldersPaversAndMulch": false,
+      "turfAndArtificialIvy": false
+    }
+  },
+  {
+    "photoNumber": "5",
+    "url": "https://dl.dropbox.com/s/h2g433dy937vpw2/IMG_0088.jpg?dl=0",
+    "placement": {
+      "fountains": false,
+      "gatesAndFences": false,
+      "landscapeLighting": false,
+      "plantsInDecorativePots": false,
+      "plantsShadeTolerant": false,
+      "plantsSunTolerant": false,
+      "rocksBouldersPaversAndMulch": false,
+      "turfAndArtificialIvy": false
+    }
+  },
+  {
+    "photoNumber": "6",
+    "url": "https://dl.dropbox.com/s/h2g433dy937vpw2/IMG_0088.jpg?dl=0",
+    "placement": {
+      "fountains": false,
+      "gatesAndFences": false,
+      "landscapeLighting": false,
+      "plantsInDecorativePots": false,
+      "plantsShadeTolerant": false,
+      "plantsSunTolerant": false,
+      "rocksBouldersPaversAndMulch": false,
+      "turfAndArtificialIvy": false
+    }
+  },
+  {
+    "photoNumber": "7",
+    "url": "https://dl.dropbox.com/s/h2g433dy937vpw2/IMG_0088.jpg?dl=0",
+    "placement": {
+      "fountains": false,
+      "gatesAndFences": false,
+      "landscapeLighting": false,
+      "plantsInDecorativePots": false,
+      "plantsShadeTolerant": false,
+      "plantsSunTolerant": false,
+      "rocksBouldersPaversAndMulch": false,
+      "turfAndArtificialIvy": false
+    }
+  },
+  {
+    "photoNumber": "8",
+    "url": "https://dl.dropbox.com/s/h2g433dy937vpw2/IMG_0088.jpg?dl=0",
+    "placement": {
+      "fountains": false,
+      "gatesAndFences": false,
+      "landscapeLighting": false,
+      "plantsInDecorativePots": false,
+      "plantsShadeTolerant": false,
+      "plantsSunTolerant": false,
+      "rocksBouldersPaversAndMulch": false,
+      "turfAndArtificialIvy": true
+    }
+  }
+]

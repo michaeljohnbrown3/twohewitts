@@ -43,7 +43,10 @@ const closeQuote = function () {
 
 document.querySelector('.head-nav').addEventListener('click', function (e) {
   e.preventDefault();
-  if (e.target.classList.contains('head-nav__link')) {
+  if (
+    e.target.classList.contains('head-nav__link') &&
+    e.target.id != 'gallery-link'
+  ) {
     const id = e.target.getAttribute('href');
     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
   }
@@ -68,10 +71,10 @@ quoteRequestBtn.forEach(btn => {
   });
 });
 
-quoteBack.addEventListener('click', e => {
-  e.preventDefault();
-  closeQuote();
-});
+// quoteBack.addEventListener('click', e => {
+//   e.preventDefault();
+//   closeQuote();
+// });
 
 const sendEmail = function () {
   // This is created in
@@ -105,18 +108,18 @@ const sendEmail = function () {
   }).then(message => (message == 'OK' ? '' : alert(message)));
 };
 
-form.addEventListener('submit', e => {
-  e.preventDefault();
-  sendEmail(); /// comment this out for dev purposes
-  quoteSubmit.style.backgroundColor = 'darkgrey';
-  quoteSubmit.innerHTML = 'sending...';
-  setTimeout(() => {
-    quoteSubmit.style.backgroundColor = 'green';
-    quoteSubmit.innerHTML = `request sent!`;
-    form.submit();
-    form.reset();
-  }, 2500);
-  setTimeout(() => {
-    closeQuote();
-  }, 4000);
-});
+// form.addEventListener('submit', e => {
+//   e.preventDefault();
+//   sendEmail(); /// comment this out for dev purposes
+//   quoteSubmit.style.backgroundColor = 'darkgrey';
+//   quoteSubmit.innerHTML = 'sending...';
+//   setTimeout(() => {
+//     quoteSubmit.style.backgroundColor = 'green';
+//     quoteSubmit.innerHTML = `request sent!`;
+//     form.submit();
+//     form.reset();
+//   }, 2500);
+//   setTimeout(() => {
+//     closeQuote();
+//   }, 4000);
+// });

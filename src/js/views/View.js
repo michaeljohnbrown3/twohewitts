@@ -10,8 +10,8 @@ export const galleryLinkText = document.querySelector('#gallery-link-text');
 
 export const headerHeight = header.getBoundingClientRect().height;
 export const headNavHeight = headNav.getBoundingClientRect().height;
-export const aboutUsHeight = aboutUs.getBoundingClientRect().height;
-export const servicesHeight = services.getBoundingClientRect().height;
+// export const aboutUsHeight = aboutUs.getBoundingClientRect().height;
+// export const servicesHeight = services.getBoundingClientRect().height;
 
 export const topAlign = headerHeight + headNavHeight;
 

@@ -1,3 +1,24 @@
+const contentContainer = document.querySelector('#content');
+async function load() {
+  const page = await import('./views/mainView');
+  // Render page
+  const content = page.render();
+  contentContainer.innerHTML = content;
+}
+load();
+
+const galleryLink = document.querySelector('#gallery-link');
+galleryLink.addEventListener('click', e => {
+  e.preventDefault();
+  async function loadGallery() {
+    const page = await import('./views/galleryView');
+    const content = page.render();
+    contentContainer.innerHTML = content;
+    page.appendImg();
+  }
+  loadGallery();
+});
+
 /*
 const route = event => {
   event = event || window.event;
@@ -23,22 +44,3 @@ window.route = route;
 
 handleLocation();
 */
-const contentContainer = document.querySelector('#content');
-async function load() {
-  const page = await import('./views/mainView');
-  // Render page
-  const content = page.render();
-  contentContainer.innerHTML = content;
-}
-load();
-
-const galleryLink = document.querySelector('#gallery-link');
-galleryLink.addEventListener('click', e => {
-  e.preventDefault();
-  async function loadGallery() {
-    const page = await import('./views/galleryView');
-    const content = page.render();
-    contentContainer.innerHTML = content;
-  }
-  loadGallery();
-});
