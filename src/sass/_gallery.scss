@@ -1,0 +1,36 @@
+.gallery-section {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-primary-light;
+  margin-top: $nav-header-connect;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.9),
+      rgba($color-primary-light, 0.9)
+    ),
+    url(../assets/images/IMG_3265.jpg);
+  &__header {
+    font-family: $default-font;
+    font-size: 3.2rem;
+    padding: 2rem 2rem;
+    color: $color-white;
+    text-shadow: 0 1px 7px $color-black;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    &--photo-box {
+      background-color: $color-white;
+      padding: 1rem 1rem;
+    }
+
+    &--photo {
+      width: auto;
+      height: auto;
+    }
+  }
+}

@@ -1,48 +1,65 @@
 import galleryData from './../../gallery-data/gallery.json';
 
 export function render() {
-  const markup = `
-    <div class="tagline-container">
-      <h2>Fountains</h2>
-        <div class="gallery-section-container" id="gallery-fountains"></div>
-      <h2>Gates and Fences</h2>
-        <div class="gallery-section-container" id="gallery-gates"></div>
-      <h2>Landscape Lighting</h2>
-        <div class="gallery-section-container" id="gallery-lighting"></div>
-      <h2>Plants in Decorative Pots</h2>
-        <div class="gallery-section-container" id="gallery-pots"></div>
-      <h2>Plants - Shade Tolerant</h2>
-        <div class="gallery-section-container" id="gallery-shade"></div>
-      <h2>Plants - Sun Tolerant</h2>
-        <div class="gallery-section-container" id="gallery-sun"></div>
-      <h2>Rocks, Boulders, Pavers, and Mulch</h2>
-        <div class="gallery-section-container" id="gallery-rocks"></div>
-      <h2>Turf and Artificial Ivy</h2>
-        <div class="gallery-section-container" id="gallery-turf"></div>
-    </div>
-    `;
-  return markup;
-}
+  const galleryEl = document.createElement('div');
+  galleryEl.setAttribute('class', 'gallery-section');
 
-export function appendImg() {
-  galleryData.forEach(photo => {
-    console.log(photo);
-    const identifySection = function () {
-      if (photo.placement.fountains == true) return '#gallery-fountains';
-      if (photo.placement.gatesAndFences == true) return '#gallery-gates';
-      if (photo.placement.landscapeLighting == true) return '#gallery-lighting';
-      if (photo.placement.plantsInDecorativePots == true)
-        return '#gallery-pots';
-      if (photo.placement.plantsShadeTolerant == true) return '#gallery-shade';
-      if (photo.placement.plantsSunTolerant == true) return '#gallery-sun';
-      if (photo.placement.rocksBouldersPaversAndMulch == true)
-        return '#gallery-rocks';
-      if (photo.placement.turfAndArtificialIvy == true) return '#gallery-turf';
-    };
-    const galleryContainer = document.querySelector(identifySection());
-    const markup = `
-    <img src="${photo.url}">
-    `;
-    galleryContainer.innerHTML = markup;
-  });
+  // RENDER LOADING SPINNER HERE
+
+  const renderSection = function (id, title) {
+    const sectionHeader = document.createElement('h2');
+    sectionHeader.setAttribute('class', 'gallery-section__header');
+    sectionHeader.textContent = `${title}`;
+
+    const sectionContainer = document.createElement('div');
+    sectionContainer.setAttribute('class', 'gallery-section__container');
+    sectionContainer.setAttribute('id', `gallery-${id}`);
+    galleryEl.appendChild(sectionHeader);
+
+    const loadImg = src =>
+      new Promise((resolve, reject) => {
+        const img = new Image();
+        img.onload = () => resolve(img);
+        img.onerror = reject;
+        img.src = src;
+      });
+
+    let imgParse = [];
+    galleryData.forEach(img => {
+      if (img.placement == id) {
+        imgParse.push(img);
+      }
+    });
+
+    const imgUrls = imgParse.map(img => {
+      return img.urlthumb;
+    });
+
+    Promise.all(imgUrls.map(loadImg)).then(imgs => {
+      imgs.forEach(img => {
+        const imgBox = document.createElement('div');
+        const image = img;
+        imgBox.setAttribute('class', 'gallery-section__container--photo-box');
+        image.setAttribute('class', 'gallery-section__container--photo');
+        imgBox.appendChild(image);
+        sectionContainer.appendChild(imgBox);
+      });
+    });
+
+    return sectionContainer;
+  };
+  galleryEl.appendChild(renderSection('fountains', 'Fountains'));
+  galleryEl.appendChild(renderSection('gates', 'Gates and Fences'));
+  galleryEl.appendChild(renderSection('lighting', 'Landscape Lighting'));
+  galleryEl.appendChild(
+    renderSection('decorative', 'Plants in Decorative Pots')
+  );
+  galleryEl.appendChild(renderSection('shade', 'Plants - Shade Tolerant'));
+  galleryEl.appendChild(renderSection('sun', 'Plants - Sun Tolerant'));
+  galleryEl.appendChild(
+    renderSection('rocks', 'Rocks, Boulders, Pavers, and Mulch')
+  );
+  galleryEl.appendChild(renderSection('turf', 'Turf and Artificial Ivy'));
+
+  return galleryEl;
 }

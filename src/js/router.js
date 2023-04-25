@@ -1,4 +1,5 @@
 const contentContainer = document.querySelector('#content');
+
 async function load() {
   const page = await import('./views/mainView');
   // Render page
@@ -13,8 +14,9 @@ galleryLink.addEventListener('click', e => {
   async function loadGallery() {
     const page = await import('./views/galleryView');
     const content = page.render();
-    contentContainer.innerHTML = content;
-    page.appendImg();
+    contentContainer.innerHTML = '';
+    contentContainer.appendChild(content);
+    console.log(contentContainer);
   }
   loadGallery();
 });
