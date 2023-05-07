@@ -41,17 +41,6 @@ const closeQuote = function () {
   form.reset();
 };
 
-document.querySelector('.head-nav').addEventListener('click', function (e) {
-  e.preventDefault();
-  if (
-    e.target.classList.contains('head-nav__link') &&
-    e.target.id != 'gallery-link'
-  ) {
-    const id = e.target.getAttribute('href');
-    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
-  }
-});
-
 document.querySelector(
   '.footer__certifications--copyright'
 ).textContent = `${new Date().getFullYear()} TWO Hewitts, Inc.`;

@@ -8,6 +8,17 @@ async function load() {
 }
 load();
 
+const logoLink = document.querySelector('#logo-link');
+logoLink.addEventListener('click', e => {
+  e.preventDefault();
+  async function loadHome() {
+    const page = await import('./views/mainView');
+    const content = page.render();
+    contentContainer.innerHTML = content;
+  }
+  loadHome();
+});
+
 const galleryLink = document.querySelector('#gallery-link');
 galleryLink.addEventListener('click', e => {
   e.preventDefault();
@@ -16,9 +27,30 @@ galleryLink.addEventListener('click', e => {
     const content = page.render();
     contentContainer.innerHTML = '';
     contentContainer.appendChild(content);
-    console.log(contentContainer);
   }
   loadGallery();
+});
+
+const aboutLink = document.querySelector('#about-link');
+aboutLink.addEventListener('click', e => {
+  e.preventDefault();
+  async function loadAbout() {
+    const page = await import('./views/aboutView');
+    const content = page.render();
+    contentContainer.innerHTML = content;
+  }
+  loadAbout();
+});
+
+const servicesLink = document.querySelector('#services-link');
+servicesLink.addEventListener('click', e => {
+  e.preventDefault();
+  async function loadServices() {
+    const page = await import('./views/servicesView');
+    const content = page.render();
+    contentContainer.innerHTML = content;
+  }
+  loadServices();
 });
 
 /*

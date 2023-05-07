@@ -1,6 +1,5 @@
 .section {
   &__aboutus {
-    padding: 0 5rem;
     border: 1px;
     display: flex;
     align-items: center;
@@ -21,10 +20,10 @@
 }
 
 .aboutus-container {
-  margin-top: calc(#{$nav-header-connect} + #{$nav-height} + 2rem);
-  height: 70vh;
+  margin-top: calc(#{$nav-header-connect});
+  height: calc(100vh-#{$nav-header-connect});
   width: 100%;
-  max-width: 100rem;
+  // max-width: 100rem;
   background-color: $color-white;
   position: relative;
   display: flex;
@@ -36,28 +35,28 @@
       rgba($color-lightest-grey, 0)
     ),
     url(../assets/images/IMG_0003-lg.jpg);
-  background-size: cover;
+  background-size: auto;
   background-position: center;
 
-  @include respond(tab-land) {
-    height: 45rem;
-    margin-top: calc(#{$nav-header-connect} + #{$nav-height} + 4rem);
-  }
+  // @include respond(tab-land) {
+  //   height: 45rem;
+  //   margin-top: calc(#{$nav-header-connect} + #{$nav-height} + 4rem);
+  // }
 
-  @include respond(phone) {
-    justify-content: center;
-    align-items: center;
-    height: 60rem;
-  }
+  // @include respond(phone) {
+  //   justify-content: center;
+  //   align-items: center;
+  //   height: 60rem;
+  // }
 
   &__photo {
     height: auto;
     width: 50%;
 
-    @include respond(tab-port) {
-      width: 75%;
-      margin-bottom: 2rem;
-    }
+    // @include respond(tab-port) {
+    //   width: 75%;
+    //   margin-bottom: 2rem;
+    // }
 
     &--file {
       position: relative;
@@ -67,9 +66,9 @@
       overflow: clip;
     }
 
-    @include respond(phone-large) {
-      display: none;
-    }
+    // @include respond(phone-large) {
+    //   display: none;
+    // }
   }
 
   &__text {
@@ -102,12 +101,12 @@
       text-align: justify;
     }
 
-    @include respond(phone) {
-      height: 40rem;
-      width: 100%;
-      -webkit-clip-path: polygon(0 5rem, 100% 3rem, 100% 38rem, 0 100%);
-      clip-path: polygon(0 5rem, 100% 3rem, 100% 38rem, 0 100%);
-    }
+    // @include respond(phone) {
+    //   height: 40rem;
+    //   width: 100%;
+    //   -webkit-clip-path: polygon(0 5rem, 100% 3rem, 100% 38rem, 0 100%);
+    //   clip-path: polygon(0 5rem, 100% 3rem, 100% 38rem, 0 100%);
+    // }
   }
 }
 
