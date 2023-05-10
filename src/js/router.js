@@ -4,7 +4,8 @@ async function load() {
   const page = await import('./views/mainView');
   // Render page
   const content = page.render();
-  contentContainer.innerHTML = content;
+  contentContainer.innerHTML = '';
+  contentContainer.appendChild(content);
 }
 load();
 
@@ -14,7 +15,8 @@ logoLink.addEventListener('click', e => {
   async function loadHome() {
     const page = await import('./views/mainView');
     const content = page.render();
-    contentContainer.innerHTML = content;
+    contentContainer.innerHTML = '';
+    contentContainer.appendChild(content);
   }
   loadHome();
 });
