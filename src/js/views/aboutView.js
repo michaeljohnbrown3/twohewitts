@@ -7,12 +7,11 @@ export function render() {
                   <div class="aboutus-container__text">
                     <div class="aboutus-container__photo">
                       <img
-                        src="src/assets/images/IMG_0263.jpg"
+                        src="https://ik.imagekit.io/mjb06h/TwoHewitts/rocks/tr:w-200/rocks11.jpg"
                         alt="Photo 1"
                         class="aboutus-container__photo--file"
                       />
                     </div>
-                    <h3 class="aboutus-container__text--title">About us</h3>
                     <p class="aboutus-container__text--paragraph">
                       TWO Hewitt’s, Inc. is a family owned company with more than 20
                       years experience in lawn maintenance and landscaping. We are

@@ -1,4 +1,14 @@
 const contentContainer = document.querySelector('#content');
+const headNavLinks = document.querySelectorAll('.head-nav__link');
+console.log(headNavLinks);
+
+function removeLinkSelection() {
+  headNavLinks.forEach(el => {
+    if (el.classList.contains('selected-link')) {
+      el.classList.remove('selected-link');
+    }
+  });
+}
 
 async function load() {
   const page = await import('./views/mainView');
@@ -17,6 +27,7 @@ logoLink.addEventListener('click', e => {
     const content = page.render();
     contentContainer.innerHTML = '';
     contentContainer.appendChild(content);
+    removeLinkSelection();
   }
   loadHome();
 });
@@ -29,6 +40,8 @@ galleryLink.addEventListener('click', e => {
     const content = page.render();
     contentContainer.innerHTML = '';
     contentContainer.appendChild(content);
+    removeLinkSelection();
+    galleryLink.classList.add('selected-link');
   }
   loadGallery();
 });
@@ -40,6 +53,8 @@ aboutLink.addEventListener('click', e => {
     const page = await import('./views/aboutView');
     const content = page.render();
     contentContainer.innerHTML = content;
+    removeLinkSelection();
+    aboutLink.classList.add('selected-link');
   }
   loadAbout();
 });
@@ -51,6 +66,8 @@ servicesLink.addEventListener('click', e => {
     const page = await import('./views/servicesView');
     const content = page.render();
     contentContainer.innerHTML = content;
+    removeLinkSelection();
+    servicesLink.classList.add('selected-link');
   }
   loadServices();
 });

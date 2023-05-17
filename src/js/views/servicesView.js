@@ -1,9 +1,6 @@
 export function render() {
   return `
   <div class="section__services" id="services">
-    <div class="heading-secondary white section__services--title">
-    Services
-    </div>
     <div class="services">
         <div class="services__container">
             <div class="card">

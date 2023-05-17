@@ -8,10 +8,6 @@
 
   &__services {
     width: 100%;
-    max-width: 100rem;
-    &--title {
-      margin-top: calc(#{$nav-header-connect} + #{$nav-height}+ 2rem);
-    }
 
     @include respond(tab-port) {
       max-width: 80rem;
@@ -21,7 +17,8 @@
 
 .aboutus-container {
   margin-top: calc(#{$nav-header-connect});
-  height: calc(100vh-#{$nav-header-connect});
+  height: calc(100vh - #{$nav-header-connect});
+  // height: 50vh;
   width: 100%;
   // max-width: 100rem;
   background-color: $color-white;
@@ -74,11 +71,12 @@
   &__text {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    padding: 20% 10%;
+    gap: 4rem;
+    padding: 0 10%;
     width: 60%;
-    height: 100%;
+    height: auto;
     -webkit-clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
     clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
     background-image: linear-gradient(
@@ -113,8 +111,11 @@
 .services {
   display: flex;
   align-items: center;
-  margin: 3rem 0;
-  max-width: 100rem;
+  justify-content: center;
+  margin-top: $nav-header-connect;
+  padding: 3rem 0;
+  height: calc(100vh - $nav-header-connect);
+  width: 100%;
 
   @include respond(phone) {
     flex-direction: column;
@@ -172,6 +173,7 @@
     font-family: $cursive-font;
     font-size: 2rem;
     margin: 2rem;
+    text-align: center;
 
     @include respond(tab-land) {
       font-size: 1.5rem;

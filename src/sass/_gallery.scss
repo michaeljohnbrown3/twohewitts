@@ -1,37 +1,87 @@
 .gallery-section {
+  background-color: $color-white;
+  margin-top: calc($nav-header-connect + 2rem);
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 40px;
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 20px;
+}
+
+.section-title {
+  grid-column: 1 / -1;
+  font-size: 3.5rem;
+  font-family: $default-font;
+  color: $color-primary;
+}
+
+.galleryImg {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 3px;
+  position: relative;
+  transition: transform 250ms;
+  cursor: pointer;
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 3px 3px 10px black;
+  }
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.95);
   display: flex;
-  flex-direction: column;
-  background-color: $color-primary-light;
-  margin-top: $nav-header-connect;
-  background-image: linear-gradient(
-      to right bottom,
-      rgba($color-primary-light, 0.9),
-      rgba($color-primary-light, 0.9)
-    ),
-    url(https://dl.dropbox.com/s/zsnsztuyn1gc68f/IMG_3265-thumb.jpg?dl=0);
-  background-size: cover;
-  &__header {
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: 250ms transform;
+  padding: 5rem;
+  z-index: 5000;
+  &__title {
+    color: $color-light-grey;
+    position: fixed;
+    font-style: italic;
+    left: 2rem;
+    bottom: 0.5rem;
     font-family: $default-font;
-    font-size: 3.2rem;
-    padding: 2rem 2rem;
-    color: $color-white;
-    text-shadow: 0 1px 7px $color-black;
+    font-size: 3.5rem;
   }
+}
 
-  &__container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+#selected-image {
+  max-height: 100%;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
 
-    &--photo-box {
-      background-color: $color-white;
-      padding: 1rem 1rem;
-    }
-
-    &--photo {
-      width: auto;
-      height: auto;
-    }
+.picture-btn {
+  background-color: $color-primary;
+  color: $color-white;
+  font-family: $default-font;
+  font-size: 3rem;
+  margin: 0 1rem;
+  height: 5rem;
+  width: 5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 5001;
+  border: none;
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 3px 3px 10px black;
   }
+}
+
+.close-btn {
+  align-self: flex-start;
+  margin-left: -6rem;
 }
