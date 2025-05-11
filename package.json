@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@parcel/resolver-glob": "^2.8.3",
-    "core-js": "^3.29.0"
+    "core-js": "^3.29.0",
+    "twohewitts": "file:"
   }
 }

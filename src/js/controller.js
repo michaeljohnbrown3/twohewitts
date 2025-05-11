@@ -51,7 +51,7 @@ document.querySelector('.head-nav').addEventListener('click', function (e) {
 
 document.querySelector(
   '.footer__certifications--copyright'
-).textContent = `${new Date().getFullYear()} TWO Hewitts, Inc.`;
+).textContent = `${new Date().getFullYear()} Eileen Landscaping LLC`;
 
 galleryLink.addEventListener('mouseover', () => {
   galleryLinkText.textContent = 'coming soon!';
@@ -86,7 +86,7 @@ const sendEmail = function () {
 
   Email.send({
     SecureToken: '855468f7-42a8-49ee-bc80-44688872003e',
-    To: 'jasonslawns95@outlook.com',
+    To: 'Eileenlandscapingfl@gmail.com',
     From: 'michaeljohnbrown3@gmail.com',
     Subject: 'Quote Requested!',
     Body: `You have received a request for a quote from ${quoteName.value} at ${

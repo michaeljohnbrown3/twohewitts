@@ -31,9 +31,9 @@
     &-name {
       font-family: $default-font;
       font-size: 3.2rem;
-      border: solid;
-      border-width: 0.5rem;
-      border-color: $color-white;
+      // border: solid;
+      // border-width: 0.5rem;
+      // border-color: $color-white;
       padding: 1rem 0.5rem 0.2rem 0.5rem;
 
       @include respond(tab-port) {
